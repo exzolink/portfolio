@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="kz">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grad Media Group</title>
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="preload" href="imgs/bg.mp4" as="video" />
+		<link rel="preload" href="imgs/bg-who.mp4" as="video" />
+		<link rel="preload" href="imgs/bg-need.mp4" as="video" />
+	</head>
+	<body class="mainpage">
+		<header class="header">
+			<video
+				class="header__bg"
+				preload="auto"
+				playsinline
+				loop
+				muted
+				autoplay
+				src="imgs/bg.mp4"
+			></video>
+			<img
+				decoding="async"
+				class="header__bg_neon"
+				src="imgs/bg_neon.svg"
+				alt=""
+			/>
+
+			<div class="header__container">
+				<div class="header__nav">
+					<button class="header__burger js-button" data-btn="nav">
+						<img decoding="async" src="imgs/burger.svg" alt="" />
+					</button>
+					<a href="" class="header__logo"
+						><img decoding="async" src="imgs/logo.svg" alt=""
+					/></a>
+					<button class="header__tel js-button" data-btn="tel">
+						<img decoding="async" src="imgs/phone.svg" alt="" />
+					</button>
+				</div>
+
+				<div class="header__body">
+					<h1 class="title--md">
+						Разработка сайтов для Digital трансформации вашего бизнеса
+					</h1>
+
+					<div class="header__button">
+						<button class="button js-button" data-btn="call">
+							Заказать сайт
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="last">
+				<div class="container">
+					<div class="last__inner">
+						<span class="title--md last__hidden">
+							Оцените наш<br />
+							последний проект
+						</span>
+						<div class="last__frame">
+							<iframe
+								data-src="https://ucg.kz"
+								id="lastSite"
+								frameborder="0"
+							></iframe>
+							<button class="button js-button" data-btn="lastSite">
+								Посмотреть сайт
+							</button>
+							<div class="last__frame_placeholder">
+								<img src="imgs/placeholder.jpg" alt="" />
+							</div>
+						</div>
+
+						<div class="last__info">
+							<div class="last__info_inner">
+								<h2 class="title--md last__title">
+									Оцените наш<br />
+									последний проект
+								</h2>
+
+								<span class="title--md last__text">сайт UCG.kz</span>
+
+								<div class="last__rating">
+									<div
+										class="last__rating_thumb last__rating--1"
+										data-rating="1"
+									></div>
+									<div
+										class="last__rating_thumb last__rating--2"
+										data-rating="2"
+									></div>
+									<div
+										class="last__rating_thumb last__rating--3"
+										data-rating="3"
+									></div>
+									<div
+										class="last__rating_thumb last__rating--4"
+										data-rating="4"
+									></div>
+									<div
+										class="last__rating_thumb last__rating--5"
+										data-rating="5"
+									></div>
+									<span class="last__rating_result"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="who">
+				<video
+					data-src="imgs/bg-who.mp4"
+					muted
+					autoplay
+					loop
+					playsinline
+					class="who__bg lazy"
+				></video>
+				<div class="container">
+					<div class="who__inner">
+						<span class="who__text_bg">Кто<br />мы?</span>
+						<div class="who__info">
+							<div class="who__img">
+								<img decoding="async" src="imgs/logo-lg.svg" alt="" />
+							</div>
+
+							<p class="who__text">Digital агентство полного цикла.</p>
+							<p class="who__text">
+								Мы движемся навстречу инновациям и меняем способы взаимодействия
+								компаний со своей аудиторией в интернет-пространстве.
+							</p>
+							<p class="who__text">
+								К вашим услугам готовы предоставить не только разработку сайтов,
+								но и создание маркетинговых стратегий, smm продвижение,
+								контекстную и таргетированную рекламу.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="portfolio">
+				<div class="portfolio__inner">
+					<div class="container">
+						<div class="portfolio__selectors flex-gap">
+							<div class="tab__selector active">Продуктовые сайты</div>
+							<div class="tab__selector">Pharma</div>
+							<div class="tab__selector">B2B сегмент</div>
+							<div class="tab__selector">Интернет-магазины</div>
+							<div class="tab__selector">Для интерьера помещений</div>
+							<div class="tab__selector">Fashion & Beauty</div>
+						</div>
+					</div>
+
+					<div class="portfolio__examples">
+						<a href="#" class="portfolio__example">
+							<div class="portfolio__img">
+								<img decoding="async" src="imgs/portfolio-1.jpg" alt="" />
+							</div>
+
+							<div class="portfolio__info">
+								<h4 class="portfolio__info_title">Aksay</h4>
+								<p class="portfolio__info_desc">
+									Продуктовая марка <br />
+									Landing Page с элементами блога
+								</p>
+							</div>
+						</a>
+
+						<a href="#" class="portfolio__example">
+							<div class="portfolio__img">
+								<img decoding="async" src="imgs/portfolio-2.jpg" alt="" />
+							</div>
+
+							<div class="portfolio__info">
+								<h4 class="portfolio__info_title">Aksay</h4>
+								<p class="portfolio__info_desc">
+									Продуктовая марка <br />
+									Landing Page с элементами блога
+								</p>
+							</div>
+						</a>
+
+						<a href="#" class="portfolio__example">
+							<div class="portfolio__img">
+								<img decoding="async" src="imgs/portfolio-1.jpg" alt="" />
+							</div>
+
+							<div class="portfolio__info">
+								<h4 class="portfolio__info_title">Aksay</h4>
+								<p class="portfolio__info_desc">
+									Продуктовая марка <br />
+									Landing Page с элементами блога
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="portfolio__more_wrapper">
+						<a href="#" class="portfolio__more"
+							><span>Еще</span>
+							<img decoding="async" src="imgs/arrow-right.svg" alt=""
+						/></a>
+					</div>
+				</div>
+			</section>
+
+			<section class="features">
+				<div class="features__bg_wrapper">
+					<video
+						class="features__bg lazy"
+						data-src="imgs/bg-need.mp4"
+						playsinline
+						muted
+						autoplay
+						loop
+					></video>
+				</div>
+				<div class="container">
+					<div class="features__inner">
+						<h2 class="features__title">Мы — то, что надо!</h2>
+
+						<div class="features__items">
+							<div class="features__item">
+								<span class="features__item_title">Маркетинговый подход</span>
+								<p class="features__item_desc">
+									Маркетинговый анализ вашей Целевой аудитории является
+									отправной точкой при старте работ. В процессе мы опираемся на
+									основные принципы маркетинга и психологии поведения человека.
+								</p>
+							</div>
+
+							<div class="features__item">
+								<span class="features__item_title">Эксклюзивный дизайн</span>
+								<p class="features__item_desc">
+									В нашем штате работают 4 профессиональных веб дизайнера,
+									Возглавляет команду профессиональный художник и дизайнер Денис
+									Пупкевич.
+								</p>
+							</div>
+
+							<div class="features__item">
+								<span class="features__item_title">Верстка на чистом коде</span>
+								<p class="features__item_desc">
+									&lt;div class="адаптивная верстка"&gt; <br />
+									&lt;img src="img/важна.png"&gt;<br />
+									&lt;div class="pack-title"&gt;Высокая скорость загрузки на
+									всех устройствах&lt;/div&gt;<br />
+									&lt;div class="pack-sizes"&gt;
+								</p>
+							</div>
+
+							<div class="features__item">
+								<span class="features__item_title"
+									>Нацеленность на результат</span
+								>
+								<p class="features__item_desc">
+									Готовы предоставить услуги сео-специалиста, контекстного
+									менеджера и сертифицированного facebook специалиста, которые
+									помогут привлечь на сайт трафик ваших потенциальных клиентов.
+								</p>
+							</div>
+
+							<div class="features__item">
+								<span class="features__item_title">Любовь к своему делу</span>
+								<p class="features__item_desc">
+									Наша команда с увлечением берется за каждый проект. Мы не
+									просто реализовавыем для вас услугу, а с любовью вкладываем
+									душу будучи увлеченными в процесс.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="team">
+				<div class="container">
+					<span class="team__text">Наша<br />команда</span>
+					<div class="team__inner">
+						<div class="team__selectors">
+							<div class="tab__selector" data-btn="digital">
+								Менеджер Digital проектов
+							</div>
+							<div class="tab__selector" data-btn="designers">
+								Веб-дизайнеры
+							</div>
+							<div class="tab__selector" data-btn="html">Верстальщики</div>
+							<div class="tab__selector" data-btn="web">Веб-разработчики</div>
+							<div class="tab__selector" data-btn="seo">Сео-специалист</div>
+							<div class="tab__selector" data-btn="copy">Копирайтер</div>
+							<div class="tab__selector" data-btn="director">
+								Директор по развитию
+							</div>
+							<div class="tab__selector" data-btn="sales">
+								Менеджер по продажам
+							</div>
+							<div class="tab__selector" data-btn="target">Таргетолог</div>
+							<div class="tab__selector" data-btn="context">
+								Контекстный менеджер
+							</div>
+						</div>
+
+						<div class="team__wrapper">
+							<div class="swiper-container team__container">
+								<div class="swiper-wrapper team__container_inner">
+									<div class="swiper-slide team__item" data-team="digital">
+										<img decoding="async" src="imgs/team-img-1.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="designers">
+										<img decoding="async" src="imgs/team-img-2.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="html">
+										<img decoding="async" src="imgs/team-img-3.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="designers">
+										<img decoding="async" src="imgs/team-img-4.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="web">
+										<img decoding="async" src="imgs/team-img-5.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="html">
+										<img decoding="async" src="imgs/team-img-6.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="director">
+										<img decoding="async" src="imgs/team-img-7.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="copy">
+										<img decoding="async" src="imgs/team-img-8.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="designers">
+										<img decoding="async" src="imgs/team-img-9.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="html">
+										<img decoding="async" src="imgs/team-img-10.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="sales">
+										<img decoding="async" src="imgs/team-img-11.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="context">
+										<img decoding="async" src="imgs/team-img-12.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="web">
+										<img decoding="async" src="imgs/team-img-13.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="target">
+										<img decoding="async" src="imgs/team-img-14.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="designers">
+										<img decoding="async" src="imgs/team-img-15.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="web">
+										<img decoding="async" src="imgs/team-img-16.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item" data-team="seo">
+										<img decoding="async" src="imgs/team-img-17.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="brands">
+				<div class="brands__inner">
+					<div class="swiper-container brands__container brands-1">
+						<div class="swiper-wrapper brands__wrapper">
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-1.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-2.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-3.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-4.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-5.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-6.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-7.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-8.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-9.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-10.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-11.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-12.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-13.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-14.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-15.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-16.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-17.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-18.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-19.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-20.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-21.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-22.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-23.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-24.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-25.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-26.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-27.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-28.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-29.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-30.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-31.svg" alt="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-container brands__container brands-2">
+						<div class="swiper-wrapper brands__wrapper">
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-32.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-33.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-34.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-35.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-36.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-37.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-38.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-39.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-40.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-41.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-42.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-43.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-44.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-45.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-46.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-47.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-48.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-49.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-50.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-51.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-52.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-53.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-54.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-55.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-56.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-57.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-58.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-59.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-60.svg" alt="" />
+							</div>
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands/Group-61.svg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contacts">
+				<div class="contacts__inner">
+					<div class="contacts__info">
+						<h2 class="title--md contacts__title">Контакты</h2>
+
+						<div class="contacts__info_text">
+							<span>г. Алматы, проспект Аль-Фараби, 7к4А, офис 6</span>
+							<a href="tel:+77273131880"> +7 727 313 18 80 </a>
+
+							<a href="tel:+77071511511"> +7 707 151 15 11 </a>
+							<a href="mailto:info@gradmedia.kz"> info@gradmedia.kz </a>
+						</div>
+
+						<div class="contacts__button">
+							<button class="button js-button" data-btn="call">
+								Заказать звонок
+							</button>
+						</div>
+					</div>
+
+					<div class="contacts__map">
+						<div>
+							<script
+								type="text/javascript"
+								charset="utf-8"
+								async
+								defer
+								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8b957794d1da7809433620351b8e1f03ab7de3477b809cad31fd89929078e1b1&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+							></script>
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__block">
+						<a href=""
+							><img decoding="async" src="imgs/logo-dark.svg" alt=""
+						/></a>
+						<span>Все права защищены, © 2010-2021</span>
+					</div>
+
+					<div class="footer__block">
+						<span>Адрес: г. Алматы, проспект Аль-Фараби, 7к4А, офис 6</span>
+						<span>БИН 140540017426</span>
+					</div>
+
+					<div class="footer__block">
+						<a href="">+7 727 313 18 80</a>
+						<a href="">+7 707 151 15 11</a>
+					</div>
+
+					<div class="footer__block">
+						<div class="footer__subblock">
+							<a href="">info@gradmedia.kz</a>
+							<div class="footer__socials">
+								<a href=""
+									><img decoding="async" src="imgs/instagram.svg" alt=""
+								/></a>
+								<a href=""><img decoding="async" src="imgs/fb.svg" alt="" /></a>
+							</div>
+						</div>
+						<button data-btn="privacy" class="footer__privacy js-button">
+							Политика конфиденциальности
+						</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<a href="" class="brief-label">
+			<div class="brief-label__img">
+				<img src="imgs/brief.svg" alt="" />
+			</div>
+			<span>Заполнить бриф</span>
+		</a>
+
+		<div class="modal-background" aria-hidden="true"></div>
+
+		<div class="modal modal-nav" role="dialog">
+			<div class="modal-nav__inner">
+				<button class="modal-nav__close">
+					<img
+						class="modal-close"
+						width="33"
+						height="33"
+						src="imgs/popup-close.svg"
+						alt=""
+					/>
+				</button>
+				<nav class="modal-nav__nav">
+					<!--	<a href="" class="modal-nav__link">О компании</a> -->
+					<a href="" class="modal-nav__link">Разработка сайтов</a>
+					<!--	<a href="" class="modal-nav__link">СММ</a> -->
+					<!--	<a href="" class="modal-nav__link">Контекстная реклама</a> -->
+					<!--	<a href="" class="modal-nav__link">Портфолио</a> -->
+					<a href="" class="modal-nav__link">Заполнить бриф</a>
+					<a href="" class="modal-nav__link">Контакты</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="modal modal-general modal-call" role="dialog">
+			<div class="modal-general__inner">
+				<button class="modal-general__close">
+					<img class="modal-close" src="imgs/popup-close.svg" alt="" />
+				</button>
+				<div class="modal-general__title">
+					Оставьте заявку<br />
+					Мы перезвоним вам!
+				</div>
+				<form action="#" method="POST" class="modal-general__form">
+					<input type="text" class="form-control" placeholder="Имя*" required />
+					<input
+						type="tel"
+						class="form-control form-control--tel"
+						required
+						placeholder="Телефон*"
+					/>
+					<button type="submit" class="button button--lg">
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal modal-general modal-tel" role="dialog">
+			<div class="modal-general__inner">
+				<button class="modal-general__close">
+					<img class="modal-close" src="imgs/popup-close.svg" alt="" />
+				</button>
+				<a href="tel:87071511511" class="modal-tel__phone">8 707 151 1511</a>
+				<div class="modal-tel__buttons">
+					<a href="tel:87071511511" class="button button--lg">Позвонить</a>
+					<button class="button button--lg js-button" data-btn="tel2call">
+						Заказать звонок
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-general modal-privacy" role="dialog">
+			<div class="modal-general__inner">
+				<button class="modal-general__close">
+					<img class="modal-close" src="imgs/popup-close.svg" alt="" />
+				</button>
+				<div class="modal-general__title modal-privacy__title">
+					Политика конфиденциальности
+				</div>
+
+				<div class="modal-privacy__block">
+					<p>
+						Соблюдение Вашей конфиденциальности важно для нашей компании.
+						Поэтому мы разработали Политику Конфиденциальности, которая
+						описывает, как используется и хранится Ваша информация. Пожалуйста,
+						ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо
+						вопросы.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Сбор и использование персональной информации</span>
+					<p>
+						Под персональной информацией понимаются данные, которые могут быть
+						использованы для идентификации определенного лица либо связи с ним.
+						От Вас может быть запрошено предоставление персональной информации в
+						любой момент, когда Вы связываетесь с нами.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Какую персональную информацию мы собираем</span>
+					<p>
+						Когда Вы оставляете заявку на сайте, мы можем собирать различную
+						информацию, включая Ваше имя, номер телефона, адрес электронной
+						почты и т.д.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Как мы используем Вашу персональную информацию</span>
+					<p>
+						Персональная информация позволяет нам сообщать об уникальных
+						предложениях, акциях и других мероприятиях и ближайших событиях.
+						Время от времени мы можем использовать Вашу персональную информацию
+						для отправки важных уведомлений и сообщений. Мы также можем
+						использовать персональную информацию для внутренних целей:
+						проведения аудита, анализа данных и различных исследований в целях
+						улучшения услуг. Если Вы принимаете участие в розыгрыше призов или
+						конкурсе, мы можем использовать информацию для управления такими
+						программами.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Раскрытие информации третьим лицам</span>
+					<p>Мы не раскрываем полученную от Вас информацию третьим лицам.</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Исключения</span>
+					<p>
+						В соответствии с законом, судебным порядком, в судебном
+						разбирательстве и/или на основании публичных запросов или запросов
+						от государственных органов на территории РК. Мы также можем
+						раскрывать информацию о Вас, если мы определим, что такое раскрытие
+						необходимо или уместно в целях безопасности, поддержания
+						правопорядка или иных общественно важных случаях. В случае
+						реорганизации, слияния или продажи мы можем передать собираемую нами
+						персональную информацию соответствующему третьему лицу –
+						правопреемнику.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Защита персональной информации </span>
+					<p>
+						Мы предпринимаем меры предосторожности, включая административные,
+						технические и физические для защиты Вашей персональной информации от
+						утраты, кражи и недобросовестного использования, а также от
+						несанкционированного доступа, раскрытия, изменения и уничтожения.
+					</p>
+				</div>
+
+				<div class="modal-privacy__block">
+					<span>Соблюдение Вашей конфиденциальности на уровне компании </span>
+					<p>
+						Чтобы убедиться, что Ваша персональная информация находится в
+						безопасности, мы доводим нормы соблюдения конфиденциальности и
+						безопасности до наших сотрудников и строго следим за исполнением мер
+						соблюдения конфиденциальности.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

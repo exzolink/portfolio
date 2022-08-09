@@ -1,0 +1,36 @@
+.partners {
+	margin-top: 150px;
+
+	& .title {
+		margin-bottom: 30px;
+	}
+
+	&__items {
+		position: relative;
+	}
+
+	&__item {
+		padding: 20px 15px;
+		background-color: $white;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		height: auto;
+		justify-content: center;
+
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	& .swiper-pagination {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.partners {
+		margin-top: 80px;
+	}
+}

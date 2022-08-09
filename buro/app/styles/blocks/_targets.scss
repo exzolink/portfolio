@@ -1,0 +1,159 @@
+.targets {
+	margin-top: 95px;
+
+	&__items {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 60px 25px;
+		list-style: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		& img {
+			position: absolute;
+			left: 0;
+			top: -12px;
+		}
+
+		& span {
+			padding-left: 65px;
+			font-size: 18px;
+		}
+	}
+
+	&__info {
+		margin-top: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&_tip {
+			color: $gray6;
+			line-height: 1.5;
+			max-width: 540px;
+
+			&--boxed {
+				max-width: 510px;
+				padding: 20px 100px;
+				border-radius: 20px;
+				background-color: rgba(94, 122, 170, 0.1);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.targets {
+		&__items {
+			grid-template-columns: repeat(3, auto);
+		}
+
+		&__item {
+			& img {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.targets {
+		&__items {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		&__info {
+			&_tip {
+				&--boxed {
+					margin-left: 20px;
+					padding: 30px 20px;
+					max-width: 450px;
+				}
+			}
+		}
+
+		&__item {
+			& span {
+				font-size: 16px;
+				padding-left: 50px;
+			}
+
+			& img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.targets {
+		&__info {
+			flex-direction: column;
+
+			&_tip {
+				max-width: none;
+				width: 100%;
+
+				&--boxed {
+					margin-top: 20px;
+					margin-left: 0;
+					padding: 20px 60px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.targets {
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__info {
+			&_tip {
+				&--boxed {
+					padding: 20px 30px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.targets {
+		margin-top: 50px;
+
+		&__items {
+			grid-gap: 35px 20px;
+		}
+
+		&__item {
+			& span {
+				font-size: 14px;
+				padding-left: 40px;
+			}
+
+			& img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 359px) {
+	.targets {
+		&__item {
+			& span {
+				font-size: 12px;
+			}
+		}
+	}
+}

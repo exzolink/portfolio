@@ -1,0 +1,159 @@
+.hero-slider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: #3d3485;
+}
+
+.hero-features {
+	position: absolute;
+	bottom: 65px;
+	z-index: 1;
+	color: #fff;
+}
+
+.hero {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: #3d3485;
+
+	&__inner {
+		padding-top: 105px;
+		padding-bottom: 320px;
+		color: #fff;
+	}
+
+	&__text {
+		&--sm {
+			font-size: 18px;
+		}
+
+		&--lg {
+			font-weight: 700;
+			font-size: 36px;
+			margin-top: 35px;
+			max-width: 645px;
+			margin-bottom: 25px;
+		}
+
+		&--md {
+			max-width: 650px;
+			line-height: 1.5;
+			font-size: 24px;
+			font-weight: 400;
+		}
+	}
+
+	&__button {
+		margin-top: 72px;
+		margin-bottom: 64px;
+	}
+}
+
+.hero__courses {
+	&_title {
+		font-weight: 700;
+		font-size: 24px;
+		margin-bottom: 23px;
+		display: block;
+	}
+
+	&_wrapper {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 10px;
+	}
+
+	&_item {
+		width: 100%;
+		padding: 30px;
+		background-color: #fff;
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& span {
+			margin-top: 14px;
+			display: block;
+			text-align: center;
+			color: #4e4b66;
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.hero {
+		&__inner {
+			padding-top: 40px;
+			padding-bottom: 250px;
+		}
+
+		&__courses {
+			&_item {
+				padding: 20px;
+
+				& img {
+					max-width: 45px;
+					height: auto;
+				}
+			}
+		}
+	}
+	.hero-features {
+		bottom: 35px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.hero {
+		&__courses {
+			display: none;
+		}
+
+		&__inner {
+			padding-bottom: 35px;
+		}
+
+		&__button {
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
+
+		&__text {
+			&--sm {
+				font-size: 10px;
+			}
+
+			&--md {
+				font-size: 14px;
+				max-width: 65%;
+			}
+
+			&--lg {
+				font-size: 20px;
+				margin: 20px 0;
+				max-width: 65%;
+			}
+		}
+	}
+
+	.hero-features {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.hero {
+		&__text {
+			&--lg {
+				font-size: 16px;
+			}
+			&--md {
+				font-size: 10px;
+			}
+		}
+	}
+}

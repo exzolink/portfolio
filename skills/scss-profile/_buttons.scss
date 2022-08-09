@@ -1,0 +1,469 @@
+.input-default {
+	position: relative;
+	grid-column: 1 / 3;
+
+	& span {
+		position: absolute;
+		top: -8px;
+		padding: 0 10px;
+		left: 15px;
+		transition: color 0.3s ease;
+		font-size: 12px;
+	}
+}
+
+.input-half-width {
+	grid-column: initial;
+	& input {
+		appearance: textfield;
+	}
+}
+
+.input-blue {
+	width: 100%;
+	padding: 11px;
+	font-size: 14px;
+	color: $purple;
+	border-radius: 2px;
+	font-family: "Montserrat", sans-serif;
+	border: 1px solid $purple;
+	transition: box-shadow 0.3s ease;
+	appearance: textfield;
+
+	&:focus {
+		box-shadow: 0 0 4px $purple;
+	}
+}
+
+.selector {
+	padding: 11px 18px;
+	padding-right: 28px;
+	border: 1px solid $purple;
+	appearance: none;
+	font-family: inherit;
+	background-color: transparent;
+	color: $purple;
+	outline: none;
+	font-weight: 700;
+	font-size: 14px;
+	width: 100%;
+	border-radius: 2px;
+	transition: box-shadow 0.3s ease;
+	height: auto;
+
+	&-table {
+		font-weight: 400;
+		padding-left: 10px;
+		font-family: "Montserrat", sans-serif;
+	}
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		box-shadow: 0 0 4px $purple;
+	}
+
+	& option {
+		color: $purple;
+		outline: none;
+		box-shadow: none;
+		background-color: #f3f3f3;
+		border: none;
+
+		&:checked,
+		&:hover,
+		&:focus {
+			background-color: $purple !important;
+			color: #fff;
+		}
+	}
+
+	&--red {
+		color: $red;
+		border-color: $red;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 4px $red;
+		}
+
+		& option {
+			color: $red;
+
+			&:checked,
+			&:hover,
+			&:focus {
+				background-color: $red !important;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			right: 18px;
+			top: 50%;
+			pointer-events: none;
+			transform: translateY(-50%);
+			background-image: url("../imgs/select-arrow.svg");
+			background-repeat: no-repeat;
+			width: 10px;
+			height: 6px;
+		}
+
+		&--red {
+			&:before {
+				background-image: url("../imgs/arrow.svg");
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.selector {
+		font-size: 12px;
+		padding: 7px 11px;
+		padding-right: 20px;
+		display: inline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&__wrapper {
+			&:before {
+				right: 9px;
+			}
+		}
+	}
+}
+
+// Кнопки
+
+.button {
+	font-family: inherit;
+	padding: 11px;
+	font-size: 16px;
+	text-align: center;
+	transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.button-nav {
+	background-color: transparent;
+	border-radius: 4px;
+	font-weight: 700;
+	width: 168px;
+	color: $purple;
+	border: 1px solid $purple;
+
+	&:hover,
+	&:focus {
+		background-color: $purple;
+		color: #fff;
+	}
+}
+
+.button-nav-reverse {
+	color: #fff;
+	background-color: $purple;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		color: $purple;
+	}
+}
+
+.button-cart {
+	width: 100%;
+	max-width: none !important;
+}
+
+.button-hero {
+	padding: 28px 0;
+	width: 367px;
+	background-color: $red;
+	font-family: "Montserrat", sans-serif;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #fff;
+	border: 2px solid $red;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+.button-recoms {
+	border: 1px solid #ffffff;
+	color: #fff;
+	font-weight: 700;
+	display: block;
+	font-family: "Gothic", sans-serif;
+	width: 200px;
+	font-size: 18px;
+	border-radius: 4px;
+
+	&:hover,
+	&:focus {
+		color: $purple;
+		background-color: #fff;
+	}
+}
+
+.button-reviews {
+	border: 1px solid $red;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 2px;
+	color: $red;
+	padding: 12px 25px;
+
+	&:hover,
+	&:focus {
+		background-color: $red;
+		color: #fff;
+	}
+}
+
+.button-teachers {
+	display: block;
+	border-color: #fff;
+	color: #333;
+	border-radius: 2px;
+	background-color: #fff;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+.button-course {
+	background-color: $red;
+	padding: 12px 14px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid $red;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		color: $red;
+	}
+
+	&-reverse {
+		background-color: transparent;
+		color: $red;
+
+		&:hover,
+		&:focus {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}
+
+.button-promo {
+	max-width: 90%;
+}
+
+.button-coop {
+	display: block;
+	max-width: 270px;
+	padding: 20px 0;
+
+	&:hover,
+	&:focus {
+		color: $red;
+	}
+}
+
+.button-question {
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 12px 6px;
+	border: 1px solid $light-purple;
+	width: 240px;
+	font-family: "Gothic", sans-serif;
+	color: #fff;
+	font-weight: 700;
+	background-color: $light-purple;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		color: $light-purple;
+	}
+
+	&-red {
+		border-color: $red;
+		max-width: 200px;
+		background-color: $red;
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: $red;
+		}
+	}
+}
+
+.button-note {
+	border-color: #ffcc18;
+	background-color: #ffcc18;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& svg {
+		margin-right: 14px;
+		max-width: 17px;
+		min-width: 17px;
+		height: 17px;
+		& path {
+			transition: fill 0.3s ease;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		color: #ffcc18;
+
+		& svg path {
+			fill: #ffcc18;
+		}
+	}
+}
+
+.button-favorite {
+	max-width: 215px;
+	width: 100%;
+	padding: 16px;
+	color: #fff;
+	border: 1px solid #fff;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& img {
+		margin-right: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $red;
+		border-color: $red;
+	}
+}
+
+.button-test {
+	max-width: 240px;
+}
+
+.button-discuss {
+	font-family: "Gothic", sans-serif;
+}
+
+.button-test-hero {
+	max-width: none;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.button {
+		font-size: 10px;
+		padding: 7px;
+		padding-bottom: 9px;
+	}
+
+	.button-nav {
+		max-width: 97px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.button-hero {
+		font-size: 10px;
+		max-width: 195px;
+		padding: 16px 0;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.button-course {
+		padding: 11px;
+		font-size: 12px;
+	}
+	.button-test-hero {
+		font-size: 14px;
+	}
+	.button-discuss {
+		font-size: 14px;
+		padding: 13px 6px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.button-course {
+		font-size: 10px;
+		padding: 9px;
+	}
+
+	.button-favorite,
+	.button-restore,
+	.button-test,
+	.button-test-hero,
+	.button-profile,
+	.button-question {
+		font-size: 12px;
+		padding: 12px;
+	}
+
+	.input-default {
+		& span {
+			position: absolute;
+			top: -7px;
+			font-size: 10px;
+			padding: 0 8px;
+			left: 12px;
+		}
+	}
+
+	.input-blue {
+		font-size: 12px;
+		padding: 8px 13px;
+	}
+
+	.button-cart {
+		padding: 10px;
+		font-size: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.button-test {
+		max-width: none;
+	}
+	.button-question,
+	.button-note {
+		max-width: none;
+		width: 100%;
+	}
+}

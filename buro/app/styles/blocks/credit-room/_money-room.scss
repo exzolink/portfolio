@@ -1,0 +1,137 @@
+.money-room {
+  margin-top: 95px;
+
+  & .title {
+    margin-bottom: 32px;
+    max-width: 630px;
+  }
+
+  &__subtitle {
+    margin-bottom: 55px;
+    display: block;
+    color: #656565;
+    font-size: 28px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &_img {
+      position: relative;
+      width: 115px;
+      height: 115px;
+      background-color: $white;
+      border-radius: 100%;
+      box-shadow: 2px 7px 3px rgba(0, 0, 0, 0.05);
+      margin-bottom: 25px;
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &_title {
+      color: $blue;
+      margin-bottom: 18px;
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &_desc {
+      color: #656565;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .money-room {
+    &__items {
+      grid-gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .money-room {
+    &__item {
+      &_desc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .money-room {
+    &__items {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      flex-direction: row;
+
+      &_img {
+        min-width: 90px;
+        height: 90px;
+        width: 90px;
+        margin-bottom: 0;
+        margin-right: 30px;
+
+        & img {
+          max-width: 45px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .money-room {
+    margin-top: 60px;
+
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    &__item {
+      &_title {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .money-room {
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__item {
+      &_img {
+        min-width: 75px;
+        height: 75px;
+        width: 75px;
+        margin-right: 20px;
+
+        & img {
+          max-width: 35px;
+        }
+      }
+    }
+  }
+}

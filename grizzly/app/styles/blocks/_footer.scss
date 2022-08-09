@@ -1,0 +1,173 @@
+.footer {
+	position: relative;
+	z-index: 2;
+	
+	&__content {
+		padding: 80px 0;
+		background: $bg-color;
+		border: 1px solid $border-color;
+
+		&_left,
+		&_right {
+			flex-basis: 50%;
+		}
+
+		&_right {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_logo {
+			margin-bottom: 5px;
+		}
+
+		&_text {
+			max-width: 280px;
+			color: $dark-font-color;
+			font-size: 14px;
+			margin-bottom: 20px;
+
+			&.payment {
+				margin-bottom: 5px;
+			}
+
+			&.rights {
+				max-width: none;
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		&_payment img {
+			max-width: 360px;
+			width: 100%;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: color 0.1s ease;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: column;
+
+		&_link {
+			display: flex;
+			align-items: center;
+
+			& svg {
+				min-width: 31px;
+			}
+
+			& path {
+				transition: fill 0.1s ease;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 13px;
+			}
+
+			& span {
+				color: $dark-font-color;
+				margin-left: 15px;
+				display: block;
+				font-size: 14px;
+			}
+
+			&:hover {
+				&.discord path {
+					fill: #5865f2;
+				}
+				&.skype path {
+					fill: #00aff0;
+				}
+				&.fb path {
+					fill: #1977f3;
+				}
+				&.instagram path {
+					fill: url(#gradient);
+				}
+				&.twitter path {
+					fill: #08a0e9;
+				}
+				&.mail path {
+					fill: $orange;
+				}
+			}
+		}
+	}
+
+	&__rights {
+		&_inner {
+			padding: 20px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.footer {
+		&__content {
+			padding: 40px 0;
+
+			&_inner {
+				flex-direction: column-reverse;
+			}
+
+			&_left {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.footer {
+		&__content {
+			&_logo {
+				& img {
+					width: 82px;
+					height: 82px;
+				}
+			}
+
+			&_right {
+				flex-direction: column;
+			}
+
+			&_text {
+				line-height: 1.7;
+			}
+		}
+
+		&__links {
+			margin-bottom: 40px;
+		}
+
+		&__rights {
+			&_inner {
+				padding: 40px 0;
+			}
+		}
+	}
+}

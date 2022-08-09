@@ -1,0 +1,344 @@
+.last {
+	background-color: #434343;
+	height: 760px;
+	position: relative;
+
+	&__hidden {
+		display: none;
+	}
+
+	& .container {
+		height: 100%;
+	}
+
+	&__inner {
+		display: flex;
+		padding-top: 200px;
+		height: 100%;
+	}
+
+	&__frame {
+		flex-basis: 50%;
+		height: 100%;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: calc(100% - 125px);
+			height: calc(100% + 35px);
+			z-index: 1;
+			left: -35px;
+			background-color: #2f2f2f;
+			top: -35px;
+		}
+
+		&_placeholder {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			z-index: 2;
+			overflow: hidden;
+			width: 100%;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-position: left top;
+				object-fit: cover;
+			}
+		}
+
+		& iframe {
+			width: 100%;
+			position: relative;
+			background-color: #fff;
+			z-index: 2;
+			height: 100%;
+		}
+
+		& button {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 3;
+			transform: translate(-50%, -50%);
+			max-width: 71%;
+
+			&:hover, &:focus {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__text {
+		margin-top: 30px;
+		margin-bottom: 60px;
+		font-weight: 400;
+		display: block;
+		text-transform: initial;
+	}
+
+	&__info {
+		margin-top: 40px;
+		margin-left: 140px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: "DONE!";
+			z-index: 1;
+			font-weight: 500;
+			font-size: 200px;
+			color: #2f2f2f;
+			top: -125px;
+			line-height: 1;
+			left: -225px;
+		}
+
+		&_inner {
+			z-index: 2;
+			position: relative;
+		}
+	}
+
+	&__rating {
+		display: flex;
+		align-items: flex-end;
+
+		&.selected {
+			pointer-events: none;
+		}
+
+		&_result {
+			color: $green;
+			font-size: 64px;
+			align-self: center;
+		}
+
+		&_thumb {
+			cursor: pointer;
+			width: 34px;
+			margin-right: 20px;
+			background-color: #9c9c9c;
+			transition: background-color 0.3s ease;
+
+			&.active,
+			&.selected {
+				background-color: $green;
+			}
+		}
+
+		&--1 {
+			height: 43px;
+		}
+
+		&--2 {
+			height: 63px;
+		}
+
+		&--3 {
+			height: 88px;
+		}
+
+		&--4 {
+			height: 126px;
+		}
+
+		&--5 {
+			height: 163px;
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.last {
+		height: 670px;
+
+		&__info {
+			margin-left: 70px;
+
+			&::before {
+				left: -180px;
+				font-size: 160px;
+			}
+		}
+
+		&__inner {
+			padding-top: 120px;
+		}
+
+		&__frame {
+			flex-basis: 60%;
+		}
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.last {
+		height: 630px;
+
+		&__info {
+			margin-left: 50px;
+
+			&::before {
+				left: -180px;
+				font-size: 120px;
+			}
+		}
+
+		&__text {
+			margin: 20px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.last {
+		height: auto;
+
+		&:before {
+			position: absolute;
+			content: "DONE!";
+			font-weight: 500;
+			font-size: 150px;
+			color: #2f2f2f;
+			top: 20px;
+			line-height: 1;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&__inner {
+			padding: 80px 0;
+			padding-top: 120px;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			z-index: 3;
+		}
+
+		&__frame {
+			flex-basis: 100%;
+			width: 100%;
+
+			&::before {
+				top: -37px;
+			}
+
+			& iframe {
+				height: 60vw;
+			}
+		}
+
+		&__info {
+			margin-left: 0;
+			margin-top: 50px;
+
+			&:before {
+				content: none;
+			}
+		}
+
+		&__text {
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+
+		&__title {
+			display: none;
+		}
+
+		&__hidden {
+			margin-bottom: 100px;
+			display: inline-block;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.last {
+		&::before {
+			font-size: 110px;
+		}
+
+		&__frame {
+			&::before {
+				height: calc(100% + 15px);
+				top: -17px;
+			}
+
+			& iframe {
+				height: 70vw;
+			}
+		}
+
+		&__inner {
+			padding-top: 100px;
+		}
+
+		&__hidden {
+			margin-bottom: 70px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.last {
+		&::before {
+			font-size: 100px;
+		}
+
+		&__inner {
+			padding-top: 90px;
+		}
+
+		&__info {
+			margin-top: 30px;
+		}
+
+		&__inner {
+			padding-bottom: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.last {
+		&__frame {
+			& button {
+				width: 100%;
+			}
+		}
+
+		&__rating {
+
+			&_thumb {
+				width: 18px;
+				margin-right: 15px;
+			}
+
+			&--1 {
+				height: 22px;
+			}
+
+			&--2 {
+				height: 32px;
+			}
+
+			&--3 {
+				height: 44px;
+			}
+
+			&--4 {
+				height: 63px;
+			}
+
+			&--5 {
+				height: 82px;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.brands {
+	background-color: #fff;
+	position: relative;
+	z-index: 3;
+
+	&-1 {
+		margin-bottom: 60px;
+	}
+
+	&__inner {
+		padding: 65px 0;
+	}
+
+	&__wrapper {
+		transition-timing-function: linear !important;
+	}
+
+	&__item {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.brands {
+		&__inner {
+			padding: 40px 0;
+		}
+
+		&-1 {
+			margin-bottom: 40px;
+		}
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		&__item img {
+			width: 90%;
+			max-height: 100px;
+		}
+	}
+}

@@ -1,0 +1,280 @@
+.compare {
+	margin-top: 115px;
+
+	& .title {
+		margin-bottom: 60px;
+	}
+
+	&__table {
+		display: flex;
+		justify-content: space-between;
+
+		&_subtable {
+			max-width: 795px;
+			width: 100%;
+			background: rgba(94, 122, 170, 0.03);
+			border-radius: 50px;
+			padding: 18px 35px;
+			padding-bottom: 10px;
+			text-align: center;
+			display: flex;
+
+			&-wrapper {
+				width: 100%;
+				max-width: 795px;
+			}
+
+			& .compare__table_row {
+				&:not(:nth-last-child(-n + 2)) {
+					border-bottom: 0.5px solid rgba(100, 100, 100, 0.1);
+				}
+			}
+		}
+
+		&_row {
+			height: 40px;
+			font-size: 15px;
+			color: #646464;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			line-height: 1.4;
+
+			&--double {
+				height: 70px;
+				line-height: 1.3;
+			}
+
+			&--header {
+				margin-bottom: 30px;
+				min-height: 0;
+				border-bottom: none !important;
+				text-transform: uppercase;
+				color: $black;
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+			&--button {
+				position: relative;
+				height: auto;
+
+				& .form-button {
+					position: absolute;
+					font-weight: 600;
+					top: 30px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 100%;
+					font-size: 18px;
+					max-width: 340px;
+					padding-left: 8px;
+					padding-right: 8px;
+				}
+			}
+		}
+
+		&_col {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-bottom: 10px;
+
+			& .compare__table_row {
+				font-size: 16px;
+			}
+		}
+
+		&_subcol {
+			&:first-child {
+				width: 52%;
+			}
+
+			&:last-child {
+				width: 48%;
+				border-left: 0.5px solid rgba(100, 100, 100, 0.1);
+			}
+		}
+	}
+
+	&__info {
+		margin-top: 135px;
+		padding: 25px 20px;
+		border: 2px solid $blue;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+
+		& p {
+			display: block;
+			margin-left: 20px;
+			color: $blue;
+			font-size: 19px;
+			line-height: 1.1;
+			max-width: 960px;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.compare {
+		&__table {
+			& br {
+				display: none;
+			}
+
+			&_col {
+				& .compare__table_row {
+					font-size: 14px;
+				}
+				padding-bottom: 40px;
+				min-width: 200px;
+				margin-right: 15px;
+			}
+
+			&_row {
+				height: 32px;
+				font-size: 14px;
+				padding: 5px;
+
+				&--double {
+					height: 60px;
+				}
+
+				&--button {
+					& .form-button {
+						font-size: 16px;
+						max-width: 290px;
+					}
+				}
+			}
+
+			&_subtable {
+				padding: 18px 20px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.compare {
+		&__table {
+			position: relative;
+
+			&_col {
+				max-width: 200px;
+				justify-content: flex-start;
+				padding-top: 50px;
+			}
+
+			&_row {
+				font-size: 12px;
+
+				&--header {
+					margin-bottom: 0;
+				}
+
+				&--button {
+					& .form-button {
+						top: 10px;
+					}
+				}
+			}
+
+			&_wrapper {
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+			min-width: max-content;
+
+			&_subcol {
+				max-width: 320px;
+			}
+
+			&_subtable {
+				padding: 18px 10px;
+				padding-bottom: 80px;
+			}
+		}
+
+		& .container {
+			padding-right: 0;
+		}
+
+		& .title {
+			padding-right: 15px;
+		}
+
+		& .compare__info {
+			margin-right: 15px;
+			margin-top: 50px;
+		}
+	}
+	.compare__table_col .compare__table_row {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.compare {
+		&__info {
+			margin-top: 60px;
+
+			& p {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.compare {
+		margin-top: 80px;
+
+		& .title {
+			margin-bottom: 40px;
+		}
+
+		&__table {
+			&_col {
+				min-width: 130px;
+				max-width: 130px;
+				& .compare__table_row {
+					font-size: 11px;
+				}
+			}
+
+			&_subcol {
+				max-width: 240px;
+			}
+
+			&_row {
+				&--button {
+					& .form-button {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		& .compare__info {
+			flex-direction: column;
+			position: relative;
+
+			& p {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+
+			& img {
+				position: absolute;
+				left: 50%;
+				border-radius: 100%;
+				top: -27px;
+				background-color: #fff;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

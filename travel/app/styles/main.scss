@@ -1,0 +1,94 @@
+@import "config";
+@import "swiper";
+@import "datepicker";
+
+.title {
+	font-size: 64px;
+	color: $black;
+	position: relative;
+	font-weight: 400;
+
+	&:before {
+		position: absolute;
+		content: "";
+		background-image: url("../images/dist/title-icon.svg");
+		width: 166px;
+		height: 75px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: -80px;
+		left: -80px;
+	}
+
+	& span {
+		color: $orange;
+	}
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
+	&.small {
+		font-size: 36px;
+	}
+}
+
+.subtitle {
+	font-size: 24px;
+	margin-top: 12px;
+	display: block;
+}
+
+@media screen and (max-width: 1680px) {
+	.title {
+		font-size: 60px;
+
+		&:before {
+			left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.title {
+		font-size: 48px;
+
+		&.small {
+			font-size: 30px;
+		}
+	}
+	.subtitle {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.title {
+		font-size: 42px;
+
+		&.small {
+			font-size: 24px;
+		}
+
+		&::before {
+			width: 100px;
+			height: 56px;
+			top: -60px;
+		}
+	}
+	.subtitle {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.title {
+		font-size: 36px;
+	}
+	.subtitle {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+}
+
+@import "blocks/*";

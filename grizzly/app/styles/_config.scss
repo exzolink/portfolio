@@ -1,0 +1,260 @@
+$m-right: 30px;
+$orange: #ff7a00;
+$orange-half-opacity: rgba(255, 122, 0, 0.5);
+$border-color: #27272a;
+$btn-color: #222;
+$bg-color: #151516;
+$header-note-color: #392a59;
+$header-note-border: #694ea4;
+$cart-number-color: #a80303;
+$main-font-color: #fff;
+$dark-font-color: #e5e5e5;
+$main-font-half-opacity: rgba(255, 255, 255, 0.5);
+$main-font-8-opacity: rgba(255, 255, 255, 0.8);
+$input-border: #48484C;
+$cookie-bg: #1B1B1D;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+		src: url($furl) format("woff2");
+	}
+}
+
+@include font("OpenSans", normal, 400, "../fonts/OpenSans-Regular.woff2");
+@include font("OpenSans", normal, 600, "../fonts/OpenSans-SemiBold.woff2");
+@include font("OpenSans", normal, 700, "../fonts/OpenSans-Bold.woff2");
+@include font("ME", normal, 800, "../fonts/MonumentExtended-Ultrabold.woff2");
+
+[x-cloak] {
+	display: none !important;
+}
+
+html.overflow {
+	overflow-x: hidden !important;
+	overflow-y: scroll !important;
+	height: 100%;
+
+	& body {
+		overflow: hidden !important;
+		height: 100%;
+	}
+}
+
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #5A5A5C;
+
+	&:hover {
+		background-color: darken(#5A5A5C, 5%);
+	}
+
+	&:active {
+		background-color: darken(#5A5A5C, 10%);
+	}
+}
+
+::-webkit-scrollbar-track {
+	background-color: #101012;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: #0e0e0f;
+	font-family: "OpenSans", sans-serif;
+	color: $main-font-color;
+}
+
+img,
+a,
+button {
+	user-select: none;
+	text-decoration: none;
+	color: $main-font-color;
+}
+
+input,
+button {
+	background-color: transparent;
+	border: 0;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 24px;
+	font-weight: 800;
+	font-family: "ME", "Helvetica", sans-serif;
+	text-transform: capitalize;
+
+	&.center {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	h1,
+	h2,
+	h3 {
+		&.center {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1,
+	h2,
+	h3 {
+		&.center-mobile {
+			text-align: center;
+		}
+	}
+}
+
+.container {
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.background {
+	&-part,
+	&-full {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		background: rgba(21, 21, 22, 0.5);
+	}
+
+	&-part {
+		top: 114px;
+	}
+
+	&-full {
+		z-index: 51;
+	}
+}
+
+.main {
+	padding-top: 38px;
+	position: relative;
+}
+
+section {
+	position: relative;
+	z-index: 3;
+}
+
+.main__bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	pointer-events: none;
+	user-select: none;
+
+	&_img {
+		min-height: 1250px;
+		object-fit: cover;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&_shadow {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		min-height: 1250px;
+		z-index: 2;
+		background: linear-gradient(
+			360deg,
+			#0e0e0f 0%,
+			rgba(21, 21, 22, 0) 100%
+		);
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.slider-arrow {
+		display: none !important;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	min-width: 15px;
+	position: relative;
+	border: 2.5px solid $bg-color;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px $main-font-half-opacity;
+	transition: box-shadow 0.1s ease, background-color 0.1s ease;
+
+	&:hover {
+		box-shadow: 0 0 0 2px $main-font-half-opacity;
+	}
+
+	&:checked {
+		background-color: $orange;
+		box-shadow: 0 0 0 1px $orange;
+
+		&:hover {
+			box-shadow: 0 0 0 2px $orange;
+		}
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: 0;
+
+	&:before {
+		border-radius: 0;
+	}
+}
+
+::selection {
+	color: $main-font-color;
+	background-color: rgba(255,122,0,.3);
+}

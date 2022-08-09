@@ -1,0 +1,161 @@
+.consult {
+	margin-top: 160px;
+
+	& .title {
+		color: $white;
+		font-weight: 600;
+		line-height: 1.1;
+		max-width: 550px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 22px;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		list-style: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 12px 20px;
+		margin-bottom: 30px;
+
+		&_item {
+			font-size: 18px;
+			padding-left: 35px;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				width: 26px;
+				height: 26px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url("../images/dist/checkmark-green.svg");
+			}
+		}
+	}
+
+	&__inner {
+		background-color: $blue;
+		border-radius: 30px;
+		padding: 55px 60px;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		margin-right: 55px;
+		color: $white;
+	}
+
+	&__img {
+		margin-top: -90px;
+	}
+
+	&__label {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 13px;
+	}
+
+	&__form {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 10px;
+
+		& .form-button {
+			margin-top: 0;
+			font-size: 12px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+
+		& .form-input {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.consult {
+		&__list {
+			&_item {
+				font-size: 16px;
+			}
+		}
+		&__inner {
+			padding: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 968px) {
+	.consult {
+		&__img {
+			display: none;
+		}
+
+		&__info {
+			margin-right: 0;
+		}
+
+		& .title {
+			max-width: none;
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.consult {
+		&__form {
+			grid-template-columns: 1fr;
+			grid-gap: 15px;
+		}
+
+		&__list {
+			&_item {
+				font-size: 14px;
+			}
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.consult {
+		margin-top: 80px;
+
+		&__inner {
+			padding: 30px 20px;
+			border-radius: 12px;
+		}
+
+		&__label {
+			font-size: 11px;
+		}
+
+		&__list {
+			grid-template-columns: 1fr;
+			&_item {
+				font-size: 16px;
+			}
+		}
+	}
+}

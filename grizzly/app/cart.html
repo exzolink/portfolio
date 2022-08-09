@@ -1,0 +1,251 @@
+<!--#include virtual="/parts/header.html" -->
+
+<main class="main main-hidden-bg">
+	<div class="main__bg">
+		<img
+			class="main__bg_img"
+			decoding="async"
+			src="./images/dist/bg.jpg"
+			alt=""
+		/>
+		<div class="main__bg_shadow"></div>
+	</div>
+
+	<section class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__inner">
+				<a href="#" class="breadcrumbs__link">Main page</a>
+				<a href="#" class="breadcrumbs__link">PVP</a>
+				<a href="#" class="breadcrumbs__link">Arena rating</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="info__inner cart">
+				<div class="info__left">
+					<form action="#" method="POST" class="info__form">
+						<h1 class="info__title desktop">Checkout</h1>
+						<span class="info__subtitle">Enter your info.</span>
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Character Name and Server:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Name and Server"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Discord or Skype:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Server name"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Email:*</span>
+							<input
+								type="email"
+								class="info__input"
+								required
+								placeholder="yourmail@example.com"
+							/>
+							<span class="info__label_error"
+								>invalid email!</span
+							>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Order note:</span>
+							<textarea rows="2" class="info__input"></textarea>
+						</label>
+
+						<div class="info__label payment">
+							<span class="info__label_text"
+								>Payment method:*</span
+							>
+							<label for="fondy" class="cart__payment">
+								<input
+									id="fondy"
+									type="radio"
+									required
+									name="payment"
+									checked
+									value="fondy"
+								/>
+								<span class="info__label_name">Fondy</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.svg"
+									alt=""
+								/>
+							</label>
+
+							<label for="unitpay" class="cart__payment">
+								<input
+									id="unitpay"
+									type="radio"
+									required
+									name="payment"
+									value="unitpay"
+								/>
+								<span class="info__label_name">Unitpay</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.svg"
+									alt=""
+								/>
+							</label>
+						</div>
+
+						<label for="terms" class="info__label checkbox">
+							<input id="terms" type="checkbox" name="terms" checked />
+							<div class="info__label_name">
+								I have read the
+								<a href="#">terms and conditions</a>
+							</div>
+						</label>
+
+						<button type="button" class="info__button">
+							PROCEED TO CHECKOUT
+						</button>
+					</form>
+				</div>
+				<div class="info__right cart">
+					<div class="cart__items_wrapper">
+						<h2 class="info__title mobile">Checkout</h2>
+						<span class="info__subtitle">Check your cart.</span>
+						<span class="cart__text">Products in cart:</span>
+						<div class="cart__items">
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart__result">
+							<span class="cart__result_title">Subtotal:</span>
+							<span class="cart__result_sum-sm">$72.95</span>
+						</div>
+						<div class="cart__result">
+							<span class="cart__result_title">Total:</span>
+							<span class="cart__result_sum-lg">$72.95</span>
+						</div>
+
+						<form action="#" method="POST" class="cart__promo_wrapper">
+							<span class="cart__text promo">Discount code:</span>
+
+							<div class="cart__promo">
+								<input type="text" class="cart__promo_input" placeholder="Enter discount code">
+								<button type="button" class="cart__promo_button apply">Apply</button>
+								<button type="button" class="cart__promo_button remove">Remove</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--#include virtual="/parts/blocks/popular.html" -->
+
+	<!--#include virtual="/parts/blocks/feedback.html" -->
+	
+</main>
+
+<!--#include virtual="/parts/footer.html" -->
