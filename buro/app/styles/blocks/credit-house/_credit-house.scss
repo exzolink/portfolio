@@ -1,0 +1,145 @@
+.credit-house {
+  margin-top: 95px;
+
+  & .title {
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  &__info {
+    margin-right: 30px;
+
+    &_desc {
+      color: #656565;
+      line-height: 1.5;
+      & p {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__table {
+    overflow: hidden;
+    border-radius: 15px;
+
+    & table {
+      table-layout: fixed;
+      width: 100%;
+      border-spacing: 3px;
+      text-align: left;
+      width: calc(100% + 9px);
+      margin-left: -3px;
+      margin-top: -3px;
+
+      & thead {
+        background-color: $blue;
+
+        & th {
+          color: $white;
+          font-size: 26px;
+          font-weight: 700;
+          line-height: 1;
+        }
+      }
+
+      & th {
+        padding: 15px 25px;
+      }
+
+      & td {
+        padding: 10px 25px;
+      }
+
+      & tbody {
+        & tr {
+          background-color: #f2f6f9;
+
+          & {
+            & td:first-child {
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .credit-house {
+    &__table {
+      & table {
+        & thead {
+          & th {
+            font-size: 22px;
+            padding: 10px 15px;
+          }
+        }
+
+        & td {
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+
+        & tbody {
+          & tr {
+            & td:first-child {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .credit-house {
+    &__img {
+      display: none;
+    }
+
+    &__info {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .credit-house {
+    margin-top: 60px;
+    
+    &__table {
+      overflow-x: auto;
+      & table {
+        min-width: 125vw;
+
+        & thead {
+          & th {
+            font-size: 18px;
+          }
+        }
+
+        & td {
+          font-size: 12px;
+        }
+
+        & tbody {
+          & tr {
+            & td:first-child {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

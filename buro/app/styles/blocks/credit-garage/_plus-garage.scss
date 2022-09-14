@@ -1,0 +1,42 @@
+.plus-garage {
+  margin-top: 90px;
+
+  & .title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    display: block;
+    color: #656565;
+  }
+
+  & .terms__items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+
+  & .terms__item {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+
+    &::before {
+      background-color: $blue;
+      content: url("../images/dist/garage/check.svg");
+    }
+  }
+
+  & .compare__info {
+    align-items: flex-start;
+    padding: 30px 35px;
+    margin-top: 45px;
+
+    & p {
+      font-style: italic;
+      font-size: 16px;
+      color: #656565;
+      line-height: 1.4;
+      max-width: none;
+    }
+  }
+}

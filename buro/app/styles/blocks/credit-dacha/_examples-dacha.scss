@@ -1,0 +1,23 @@
+.examples-dacha {
+  margin-top: 115px;
+
+  & .title {
+    margin-bottom: 50px;
+  }
+
+  & .params-room__table {
+    & tbody tr {
+      background-color: $white !important;
+
+      &.gray {
+        background-color: rgba(233, 233, 233, 0.7) !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .examples-dacha {
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,13 @@
+.take-area {
+    margin-top: 110px;
+}
+
+@media screen and (max-width: 550px) {
+    .take-area {
+        margin-top: 60px;
+
+        & .title {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.specials-area {
+  margin-top: 95px;
+}
+
+@media screen and (max-width: 550px) {
+    .specials-area {
+        margin-top: 60px;
+
+        & .title {
+            margin-bottom: 30px;
+        }
+    }
+}

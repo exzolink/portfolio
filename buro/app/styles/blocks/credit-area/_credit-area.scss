@@ -1,0 +1,60 @@
+.credit-area {
+    margin-top: 120px;
+
+    & .title {
+        margin-bottom: 25px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__divider {
+        margin: 37px 0;
+    }
+
+    & .credit-dacha__info {
+        margin-right: 50px;
+        max-width: 630px;
+    }
+
+    & .credit-dacha__img {
+        margin-top: 0;
+    }
+
+    & .terms__items_wrapper {
+        margin-top: 0;
+    }
+
+    & .terms__items {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    & .terms__item {
+        padding: 35px;
+        padding-top: 55px;
+
+        &::before {
+            left: 35px;
+            width: 68px;
+            height: 68px;
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .credit-area {
+        & .terms__items {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .credit-area {
+      margin-top: 60px;
+    }
+}

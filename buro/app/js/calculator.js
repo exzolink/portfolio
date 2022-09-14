@@ -155,6 +155,7 @@ class CalculatorInputs {
 		this.sliders = sliders.map((slider) => {
 			const sliderEl = document.getElementById(slider.name);
 			const sliderInput = $(`input[name="${slider.name}"]`);
+			if (sliderEl == null) return;
 			noUiSlider.create(sliderEl, {
 				start: this.slidersData.value[slider.name].current,
 				step: slider.step,

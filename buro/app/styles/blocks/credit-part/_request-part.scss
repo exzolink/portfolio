@@ -1,0 +1,116 @@
+.request-part {
+  margin-top: 90px;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    counter-reset: request-counter;
+    color: #656565;
+    line-height: 1.4;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    counter-increment: request-counter;
+    padding: 35px 105px;
+    border-radius: 15px;
+    background-color: #f2f6f9;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: counter(request-counter);
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $white;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../images/dist/part/round-blue.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 105px;
+      height: 105px;
+      z-index: 1;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: $blue;
+          border-radius: 100%;
+          left: 0;
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .request-part {
+    &__items {
+      padding-left: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .request-part {
+    &__items {
+      padding-left: 25px;
+    }
+
+    &__item {
+      padding: 25px 45px;
+      padding-right: 25px;
+
+      &::after {
+        width: 60px;
+        height: 60px;
+        left: -31px;
+        top: 20px;
+      }
+      &::before {
+        font-size: 35px;
+        top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .request-part {
+    margin-top: 60px;
+    
+    &__item {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.pay-part {
+  margin-top: 95px;
+
+  & .title {
+    margin-bottom: 45px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+
+  &__item {
+    display: flex;
+    background-color: $blue;
+    padding: 40px 45px;
+    align-items: flex-start;
+    border-radius: 20px;
+
+    & img {
+        margin-right: 25px;
+    }
+
+    & p {
+        color: $white;
+        line-height: 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pay-part {
+    &__items {
+      grid-template-columns: 1fr;
+      grid-gap: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pay-part {
+    margin-top: 60px;
+
+    &__item {
+      padding: 25px;
+
+      & img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
