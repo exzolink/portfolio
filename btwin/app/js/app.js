@@ -160,25 +160,29 @@ const initTabToggler = () => {
 
 const initMap = () => {
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      ymaps.ready(function () {
-        myMap = new ymaps.Map(
-          "map-container",
-          {
-            center: [55.753215, 37.622504],
-            zoom: 10,
-            controls: [],
-          },
-          {
-            maxZoom: 17,
-          }
-        );
+    window.addEventListener(
+      "scroll",
+      () => {
+        ymaps.ready(function () {
+          myMap = new ymaps.Map(
+            "map-container",
+            {
+              center: [55.753215, 37.622504],
+              zoom: 10,
+              controls: [],
+            },
+            {
+              maxZoom: 17,
+            }
+          );
 
-        myMap.controls.add(new ymaps.control.ZoomControl());
+          myMap.controls.add(new ymaps.control.ZoomControl());
 
-        myMap.behaviors.disable("scrollZoom");
-      });
-    }, 1000);
+          myMap.behaviors.disable("scrollZoom");
+        });
+      },
+      { once: true }
+    );
   });
 };
 
