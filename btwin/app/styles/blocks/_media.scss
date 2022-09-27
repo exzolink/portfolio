@@ -1,0 +1,149 @@
+.media {
+  margin-top: 230px;
+
+  &__wrapper {
+    margin-top: 115px;
+  }
+
+  & .swiper-container {
+    overflow: initial;
+  }
+
+  & .swiper-wrapper {
+    padding-bottom: 120px;
+  }
+
+  &__item {
+    &_publish {
+      padding: 55px;
+      box-shadow: $shadow;
+      border-radius: 25px;
+
+      & img {
+        height: 515px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      margin-bottom: 165px;
+    }
+
+    &_partner {
+      height: auto;
+      padding: 20px 50px;
+      box-shadow: $shadow;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .media {
+    &__item {
+      &_publish {
+        & img {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .media {
+    &__item {
+      &_publish {
+        margin-bottom: 50px;
+        padding: 25px;
+      }
+
+      &_partner {
+        padding: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .media {
+    margin-top: 80px;
+
+    &__wrapper {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .media {
+    &__item {
+      &_publish {
+        & img {
+          height: 600px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .media {
+    &__item {
+      &_publish {
+        & img {
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .media {
+    &__item {
+      &_publish {
+        & img {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .media {
+    &__item {
+      &_publish {
+        & img {
+          height: 350px;
+        }
+      }
+    }
+
+    & .swiper-wrapper {
+      padding-bottom: 90px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .media {
+    &__item {
+      &_publish {
+        margin-bottom: 20px;
+
+        & img {
+          height: auto;
+        }
+      }
+    }
+  }
+}

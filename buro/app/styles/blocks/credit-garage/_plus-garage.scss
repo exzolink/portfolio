@@ -40,3 +40,30 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .plus-garage {
+    & .terms__items {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .plus-garage {
+    margin-top: 60px;
+
+    & .terms__items {
+      grid-template-columns: 1fr;
+    }
+
+    & .compare__info {
+      margin-top: 45px;
+      padding: 20px;
+
+      & p {
+        margin-left: 0;
+      }
+    }
+  }
+}

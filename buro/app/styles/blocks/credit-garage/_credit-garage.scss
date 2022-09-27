@@ -72,15 +72,15 @@
     margin-top: 90px;
 
     &_text {
-        color: #565656;
-        padding: 45px 60px;
-        margin-right: 70px;
-        max-width: 800px;
+      color: #565656;
+      padding: 45px 60px;
+      margin-right: 70px;
+      max-width: 800px;
     }
 
     &_img {
-        margin-right: auto;
-        margin-top: -35px;
+      margin-right: auto;
+      margin-top: -35px;
     }
   }
 
@@ -90,10 +90,85 @@
     margin-top: 35px;
 
     & p {
-        font-style: italic;
-        font-size: 16px;
-        color: #656565;
-        line-height: 1.4;
+      font-style: italic;
+      font-size: 16px;
+      color: #656565;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .credit-garage {
+    &__tip {
+      &_img {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .credit-garage {
+    & .credit-part__img {
+      display: none;
+    }
+
+    &__items {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    & .credit-part__item {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .credit-garage {
+    &__tip {
+      margin-top: 60px;
+
+      &_text {
+        padding: 30px 40px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .credit-garage {
+    &__items {
+      grid-gap: 20px !important;
+    }
+
+    &__tip {
+      &_img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .credit-garage {
+    margin-top: 60px;
+
+    & .compare__info {
+      padding: 20px;
+
+      & img {
+        width: 40px;
+        height: 40px;
+      }
+
+      & p {
+        font-size: 14px;
+      }
     }
   }
 }
