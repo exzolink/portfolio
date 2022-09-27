@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>B-TWIN</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="js/aosnext.js" as="script" />
+		<link rel="preconnect" href="//api-maps.yandex.ru">
+		<link
+			rel="preload"
+			href="./fonts/Candara-Bold.woff2"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/Candara-Regular.woff2"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/app.min.css" />
+	</head>
+	<body>
+		
+<header class="header">
+    <div class="container container--sm">
+        <div class="header__inner">
+            <a href="" class="header__logo">
+                <img decoding="async" src="images/dist/logo.svg" width="94" height="94" alt="B-TWIN">
+            </a>
+
+            <div class="header__meta">
+                <a href="+7 (495) 120 03 88" class="header__meta_tel">+7 (495) 120 03 88</a>
+
+                <span class="header__meta_address">
+                    Трехпрудный переулок, 11/13, стр.3 <br> г.Москва, 123001
+                </span>
+            </div>
+
+            <button class="header__menu_button">
+                <img decoding="async" src="images/dist/burger.svg" width="40" height="30" alt="Меню">
+            </button>
+        </div>
+    </div>
+
+    <div class="header__menu">
+        <div class="header__menu_inner">
+            <button class="header__menu_close">
+                <img decoding="async" src="images/dist/close.svg" width="40" height="40" alt="Закрыть">
+            </button>
+            <a href="" class="header__menu_logo">
+                <img decoding="async" src="images/dist/logo.svg" width="94" height="94" alt="B-TWIN">
+            </a>
+
+            <nav class="header__menu_nav">
+                <a href="#features" class="header__menu_nav--link">
+                    Преимущества
+                </a>
+                <a href="#recom" class="header__menu_nav--link">
+                    Рекомендуется
+                </a>
+                <a href="#proc" class="header__menu_nav--link">
+                    Процедура
+                </a>
+                <a href="#protocol" class="header__menu_nav--link">
+                    Процедура и протокол
+                </a>
+                <a href="#results" class="header__menu_nav--link">
+                    Результаты
+                </a>
+                <a href="#study" class="header__menu_nav--link">
+                    Обучение
+                </a>
+                <a href="#video" class="header__menu_nav--link">
+                    Видео
+                </a>
+                <a href="#feedback" class="header__menu_nav--link">
+                    Мнение врачей
+                </a>
+                <a href="#media" class="header__menu_nav--link">
+                    СМИ и Партнеры
+                </a>
+                <a href="#socials" class="header__menu_nav--link">
+                    Социальные сети
+                </a>
+                <a href="#map" class="header__menu_nav--link">
+                    Где найти процедуры
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="hero">
+    <div class="container">
+        <div class="hero__inner">
+            <div data-aos="fade-right" data-aos-duration="800" class="hero__info">
+                <span class="hero__slogan">Многоуровневый пилинг</span>
+                <h1 class="hero__title">Новая Инновационная Система 
+                    <br>B-TWIN SYSTEM</h1>
+                    <div class="hero__circles">
+                        <span class="hero__circles-1"></span>
+                        <span class="hero__circles-2"></span>
+                        <span class="hero__circles-3"></span>
+                        <span class="hero__circles-4"></span>
+                    </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="800" class="hero__img">
+                <img decoding="async" src="images/dist/hero.jpg" alt="B-TWIN">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero-form">
+  <div class="container">
+    <div data-aos="fade-up" data-aos-duration="800" class="hero-form__inner">
+        <h2 class="hero-form__title">
+            Специальные Условия На Приобретение Системы B-TWIN SYSTEM
+        </h2>
+
+      <form action="" method="post" class="hero-form__form">
+        <label class="hero-form__label">
+          <span>Имя*</span>
+          <input type="text" class="hero-form__input" required />
+        </label>
+
+        <label class="hero-form__label">
+          <span>Город*</span>
+          <input type="text" class="hero-form__input" required />
+        </label>
+
+        <label class="hero-form__label">
+          <span>Телефон*</span>
+          <input type="tel" class="hero-form__input" required />
+        </label>
+
+        <label class="hero-form__label">
+          <span>E-mail*</span>
+          <input type="email" class="hero-form__input" required />
+        </label>
+
+        <button type="submit" class="hero-form__button">Отправить заявку</button>
+      </form>
+
+      <span class="hero-form__text">
+        * Нажимая на кнопку «Отправить заявку», вы даете
+        <a href="">согласие на обработку своих персональных данных</a>
+      </span>
+      <span class="hero-form__text">
+        ** Только для клиник и медицинских центров
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="showcase" class="showcase">
+  <div class="container">
+    <div class="showcase__inner">
+      <div data-aos="fade-right" data-aos-duration="800" class="showcase__info">
+        <span class="hero__slogan">Без Шелушения Лица, Шеи, Декольте</span>
+
+        <h2 class="showcase__title">
+          Эффективный <br />
+          Многоуровневый Инструмент <br />
+          В Руках Косметологов
+        </h2>
+
+        <div class="showcase__items">
+          <div class="showcase__item">
+            <img decoding="async" src="images/dist/features-icon1.svg" alt="" />
+            <div class="showcase__item_info">
+              <span class="showcase__item_title">Эффективный</span>
+              <p class="showcase__item_desc">
+                Два разных пилинга,две дополняющие друг друга фазы для лучшего
+                результата
+              </p>
+            </div>
+          </div>
+          <div class="showcase__item">
+            <img decoding="async" src="images/dist/features-icon2.svg" alt="" />
+            <div class="showcase__item_info">
+              <span class="showcase__item_title">Оптимальный</span>
+              <p class="showcase__item_desc">
+                Оптимальная альтернатива междулечебно-эстетическими процедурами
+                в летний период
+              </p>
+            </div>
+          </div>
+          <div class="showcase__item">
+            <img decoding="async" src="images/dist/features-icon3.svg" alt="" />
+            <div class="showcase__item_info">
+              <span class="showcase__item_title">Многоуровневый</span>
+              <p class="showcase__item_desc">
+                Система альфа- и бета- гидрокислот, которые действуют комплексно
+                на разных уровнях кожи
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-left" data-aos-duration="800" class="showcase__img">
+        <img decoding="async" src="images/dist/box.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="features__inner">
+      <h2 class="title">Преимущества</h2>
+      <span class="subtitle">
+        Многоуровнего пилинга B-TWIN SYSTEM
+      </span>
+
+      <div class="features__items">
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="50" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item1.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Моментальный эффект и видимый результат
+          </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item2.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Для любого типа кожи и возраста
+          </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item3.svg" alt="" />
+          </div>
+          <span class="features__item_desc"> Процедура «мягкого» пилинга </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item4.svg" alt="" />
+          </div>
+          <span class="features__item_desc"> Всесезонность </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item5.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Продукт для социальноактивных людей (без реабилитации)
+          </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item6.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Высокомаржинальная процедура
+          </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="350" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item7.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Можно комбинировать с инъекционными методиками, LED-терапией,
+            RF-лифтингом, фотоомоложением, дермароллером
+          </span>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" class="features__item">
+          <div class="features__item_img">
+            <img decoding="async" src="images/dist/features-item8.svg" alt="" />
+          </div>
+          <span class="features__item_desc">
+            Исклюсительно процедура для салонов и клиник эмтетической медицины
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recom" class="recom">
+  <div class="container">
+    <div class="recom__inner">
+      <h2 class="title">Рекомендуется</h2>
+      <span class="subtitle"> Убирает несовершенства кожи </span>
+
+      <div data-aos="fade-up" data-aos-duration="800" class="recom__body">
+        <div class="recom__body_img">
+          <img decoding="async" src="images/dist/face.jpg" alt="B-TWIN" />
+        </div>
+
+        <div class="recom__items">
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon1.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>1. Атрофические Рубцы</li>
+              <li>2. Тусклая “Уставшая” Кожа</li>
+            </ol>
+          </div>
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon2.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>3. Фотонарушения Коженного Покрова</li>
+              <li>4. Гиперкератоз</li>
+            </ol>
+          </div>
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon3.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>5. Угревая Сыпь И Постакне</li>
+              <li>6. Расширенные Поры/ Жирная Кожа</li>
+            </ol>
+          </div>
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon4.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>7. Неравномерный Цвет Кожи/ Пигментные Пятна</li>
+            </ol>
+          </div>
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon5.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>8. Себорейный Дерматит</li>
+            </ol>
+          </div>
+          <div class="recom__item">
+            <img
+              decoding="async"
+              src="images/dist/rec-icon6.svg"
+              width="125"
+              height="125"
+              alt=""
+            />
+
+            <ol class="recom__item_list">
+              <li>9. Старение/Поверхностные Морщины/ПТОЗ</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proc" class="proc">
+  <div class="container">
+    <div class="proc__inner">
+      <h2 class="title">Процедура из 4 шагов</h2>
+      <span class="subtitle"> На пути к совершенству </span>
+
+      <div class="proc__items">
+        <div class="proc__item">
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="proc__meta">
+            <div class="proc__img">
+              <img decoding="async" src="images/dist/proc1.png" alt="" />
+            </div>
+            <div class="proc__info">
+              <h4 class="proc__info_title">B-TWIN BOOST</h4>
+              <span class="proc__info_about"
+                >Отшелушивающий лосьон, 75 мл - pH4</span
+              >
+              <ul class="proc__list">
+                <span class="proc__list_title">
+                  Основные активные ингридиенты
+                </span>
+                <li>молочная кислота 0,3%</li>
+                <li>салициловая кислота 0,5%</li>
+                <li>гликолевая кислота 1%</li>
+                <li>мочевина 4%</li>
+              </ul>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" class="proc__desc">
+            <span class="proc__desc_title"> Описание </span>
+
+            <p class="proc__desc_text">
+              Активная формула pH4, наносится с помощью марли на лицо или
+              выбоорочно на определенные участки. Он действует без чрезмерного
+              измерения pH кожи и способствует удалению мертвых поверхностных
+              клеток и проникновению активных ингредиентов
+            </p>
+          </div>
+        </div>
+
+        <div class="proc__item">
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="proc__meta">
+            <div class="proc__img">
+              <img decoding="async" src="images/dist/proc2.png" alt="" />
+            </div>
+            <div class="proc__info">
+              <h4 class="proc__info_title">B-TWIN PEEL</h4>
+              <span class="proc__info_about">Пилинг-гель, 100 мл - pH2</span>
+              <ul class="proc__list">
+                <span class="proc__list_title">
+                  Основные активные ингридиенты
+                </span>
+                <li>миндальная кислота 20%</li>
+                <li>молочная кислота 15%</li>
+                <li>фитиновая кислота 1%</li>
+                <li>пропандиол</li>
+              </ul>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" class="proc__desc">
+            <span class="proc__desc_title"> Описание </span>
+
+            <p class="proc__desc_text">
+              Кристаллический гель pH2, который действует одновременно на разной
+              глубине благодаря разному размеру молекул его активных
+              ингредиентов
+            </p>
+          </div>
+        </div>
+
+        <div class="proc__item">
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="proc__meta">
+            <div class="proc__img">
+              <img decoding="async" src="images/dist/proc3.png" alt="" />
+            </div>
+            <div class="proc__info">
+              <h4 class="proc__info_title">B-TWIN NEUTRALIZE</h4>
+              <span class="proc__info_about"
+                >Спрей-нейтрализатор, 75 мл - pH 8-9</span
+              >
+              <ul class="proc__list">
+                <span class="proc__list_title">
+                  Основные активные ингридиенты
+                </span>
+                <li>бикарбонат натрия%</li>
+                <li>аргинин</li>
+              </ul>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" class="proc__desc">
+            <span class="proc__desc_title"> Описание </span>
+
+            <p class="proc__desc_text">
+              Распыляемый на кожу, он создает временный шипучий эффект, который
+              подчеркивает идеальную нейтрализацию геля, восстанавливая pH кожи
+              с балансирующим, увлажняющим и успокаивающим действием
+            </p>
+          </div>
+        </div>
+
+        <div class="proc__item">
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="proc__meta">
+            <div class="proc__img">
+              <img decoding="async" src="images/dist/proc4.png" alt="" />
+            </div>
+            <div class="proc__info">
+              <h4 class="proc__info_title">B-TWIN RECOVERY</h4>
+              <span class="proc__info_about"
+                >Сыворотка для восстановления после лечения, 15 мл</span
+              >
+              <ul class="proc__list">
+                <span class="proc__list_title">
+                  Основные активные ингридиенты
+                </span>
+                <li>гептапептид</li>
+                <li>перфтордекалин</li>
+                <li>
+                  стабилизированный органический кремний + гиалуроновая кислота
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" class="proc__desc">
+            <span class="proc__desc_title"> Описание </span>
+
+            <p class="proc__desc_text">
+              Интенсивная увлажняющая формула объемом 15 мл, помогает уменьшить
+              эритему и зуд. Восстанавливает и защищает кожу, создавая
+              пленкообразующий эффект. Действует как “резервуар кислорода”,
+              ускоряя процесс восстановления кожи
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="protocol" class="protocol">
+  <div class="container">
+    <div class="protocol__inner">
+      <h2 class="title">Процедура и протокол</h2>
+
+      <span class="subtitle"> B-TWIN SYSTEM </span>
+
+      <div class="protocol__wrapper">
+        <div class="protocol__buttons">
+          <button
+          data-aos="fade-left" data-aos-duration="800" data-aos-delay="100"
+            type="button"
+            class="protocol__button protocol__button--active"
+            data-tab="1"
+          >
+            <span>1</span>
+          </button>
+          <button data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" type="button" data-tab="2" class="protocol__button">
+            <span>2</span>
+          </button>
+          <button data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" type="button" data-tab="3" class="protocol__button">
+            <span>3</span>
+          </button>
+          <button data-aos="fade-left" data-aos-duration="800" data-aos-delay="400" type="button" data-tab="4" class="protocol__button">
+            <span>4</span>
+          </button>
+        </div>
+
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="500" class="protocol__body">
+          <div data-content="1" class="protocol__item protocol__item--active">
+            <h4 class="protocol__item_title">B-TWIN BOOST</h4>
+            <div class="protocol__item_info">
+              <img
+              decoding="async"
+                src="images/dist/proc1.png"
+                width="118"
+                height="315"
+                alt=""
+              />
+              <p class="protocol__item_desc">
+                Полностью удалите макияж и очисите кожу, затем смочите марлю
+                раствором B-TWIN BOOST и при необходимости нанесите на кожу.
+                Оставьте на 3-5 минут. Не смывайте
+              </p>
+            </div>
+          </div>
+
+          <div data-content="2" class="protocol__item">
+            <h4 class="protocol__item_title">B-TWIN PEEL</h4>
+            <div class="protocol__item_info">
+              <img
+              decoding="async"
+                src="images/dist/proc2.png"
+                width="118"
+                height="315"
+                alt=""
+              />
+              <p class="protocol__item_desc">
+                Равномерно нанесите гель B-TWIN PEEL на кожу веерной кистью,
+                оставьте на 3-5 минут, добавляя слои в соответствии с желаемым
+                эффектом. Чтобы усилить действие в определенных областях, вы
+                можете нанести второй слой через 3-5 минут
+              </p>
+            </div>
+          </div>
+
+          <div data-content="3" class="protocol__item">
+            <h4 class="protocol__item_title">B-TWIN NEUTRALIZE</h4>
+            <div class="protocol__item_info">
+              <img
+              decoding="async"
+                src="images/dist/proc3.png"
+                width="118"
+                height="315"
+                alt=""
+              />
+              <p class="protocol__item_desc">
+                Защитите глаза марлевыми или ватными дисками. Нейтрализуйте,
+                распыляя лосьон B-TWIN NEUTRALIZE, который создает легкий
+                шипучий эффект, который подчеркивает зоны обработки,
+                восстанавливая pH кожи. Удалите остатки, аккуратно промокните и
+                промойте водой
+              </p>
+            </div>
+          </div>
+
+          <div data-content="4" class="protocol__item">
+            <h4 class="protocol__item_title">B-TWIN RECOVERY</h4>
+            <div class="protocol__item_info">
+              <img
+              decoding="async"
+                src="images/dist/proc4.png"
+                width="118"
+                height="315"
+                alt=""
+              />
+              <p class="protocol__item_desc">
+                Нанесите 3-5 капель ВОССТАНАВЛИВАЮЩЕЙ сыворотки B-TWIN с
+                восстанавливающим действием кончиками пальцев, мягко массируя,
+                чтобы равномерно распределить по всей обрабатываемой области
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="results">
+  <div class="container">
+    <div class="results__inner">
+      <h2 class="title">Результаты</h2>
+      <span class="subtitle"> До и после </span>
+
+      <div class="results__wrapper">
+        <div class="swiper-container results__container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide results__item">
+              <div data-aos="fade-right" data-aos-duration="800" class="results__images_wrapper">
+                <span class="results__images_from">до</span>
+                <span class="results__images_to">после</span>
+                <span class="results__images_label">после 1-й процедуры</span>
+                <div class="results__images">
+                  <img src="images/dist/result-placeholder.jpg" alt="" />
+                  <img src="images/dist/result-placeholder.jpg" alt="" />
+                  <img src="images/dist/result-placeholder.jpg" alt="" />
+                </div>
+              </div>
+
+              <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="results__info">
+                <h2 class="results__info_title">После 2 Процедур</h2>
+                <span class="results__info_desc">
+                  В сочетании с регулятором пигмента Neostrata Enlighten Pigment
+                  Controller
+                </span>
+
+                <div class="results__navigation">
+                  <button type="button" class="results__navigation_button prev">
+                    <img
+                      src="images/dist/arrow.svg"
+                      width="32"
+                      height="15"
+                      alt=""
+                    />
+                  </button>
+                  <button type="button" class="results__navigation_button next">
+                    <img
+                      src="images/dist/arrow.svg"
+                      width="32"
+                      height="15"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide results__item">
+              <div class="results__images_wrapper">
+                <span class="results__images_from">до</span>
+                <span class="results__images_to">после</span>
+                <span class="results__images_label">после 1-й процедуры</span>
+                <div class="results__images">
+                  <img
+                    decoding="async"
+                    src="images/dist/result-placeholder.jpg"
+                    alt=""
+                  />
+                  <img
+                    decoding="async"
+                    src="images/dist/result-placeholder.jpg"
+                    alt=""
+                  />
+                  <img
+                    decoding="async"
+                    src="images/dist/result-placeholder.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="results__info">
+                <h2 class="results__info_title">После 2 Процедур</h2>
+                <span class="results__info_desc">
+                  В сочетании с регулятором пигмента Neostrata Enlighten Pigment
+                  Controller
+                </span>
+                <div class="results__navigation">
+                  <button type="button" class="results__navigation_button prev">
+                    <img
+                      decoding="async"
+                      src="images/dist/arrow.svg"
+                      width="32"
+                      height="15"
+                      alt=""
+                    />
+                  </button>
+                  <button type="button" class="results__navigation_button next">
+                    <img
+                      decoding="async"
+                      src="images/dist/arrow.svg"
+                      width="32"
+                      height="15"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="study" class="study">
+  <div class="container">
+    <form action="" method="post" class="study__inner">
+      <h2 class="title">Обучение</h2>
+      <span class="subtitle">И поддержка врачей</span>
+
+      <div class="study__wrapper">
+        <div class="study__events">
+          <span class="study__title"> Ближайшие Мероприятия </span>
+          <div class="study__items">
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="study__item">
+              <div class="study__item_block">
+                <img
+                  src="images/dist/event.svg"
+                  width="52"
+                  height="52"
+                  alt=""
+                />
+                <div class="study__item_info">
+                  <span class="study__item_info--meta"
+                    >25 сентября, 11:00 - 17:00</span
+                  >
+                  <span class="study__item_info--format">Вебинар, online</span>
+                  <p class="study__item_info--desc">
+                    Сочетанное применение PRP-терапииCellenis, обогащенной
+                    тромбоцитами и моноцитами, с приемом ортокремниевой кислоты
+                    в трихологической практике
+                  </p>
+                </div>
+              </div>
+
+              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="study__item_block">
+                <img
+                  src="images/dist/event-author.jpg"
+                  width="52"
+                  height="52"
+                  alt=""
+                />
+                <div class="study__item_info">
+                  <span class="study__item_info--meta"
+                    >Шарманова Анастасия Сергеевна</span
+                  >
+                  <p class="study__item_info--desc">
+                    Ведущий специалист Центра косметологии и нитевых технологий
+                    “Век Адалин” (Москва). Сертифицированный клинический тренер
+                    по Cellenis PRP
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="study__item">
+              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="study__item_block">
+                <img
+                  src="images/dist/event.svg"
+                  width="52"
+                  height="52"
+                  alt=""
+                />
+                <div class="study__item_info">
+                  <span class="study__item_info--meta"
+                    >25 сентября, 11:00 - 17:00</span
+                  >
+                  <span class="study__item_info--format">Вебинар, online</span>
+                  <p class="study__item_info--desc">
+                    Сочетанное применение PRP-терапииCellenis, обогащенной
+                    тромбоцитами и моноцитами, с приемом ортокремниевой кислоты
+                    в трихологической практике
+                  </p>
+                </div>
+              </div>
+
+              <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="study__item_block">
+                <img
+                  src="images/dist/event-author.jpg"
+                  width="52"
+                  height="52"
+                  alt=""
+                />
+                <div class="study__item_info">
+                  <span class="study__item_info--meta"
+                    >Шарманова Анастасия Сергеевна</span
+                  >
+                  <p class="study__item_info--desc">
+                    Ведущий специалист Центра косметологии и нитевых технологий
+                    “Век Адалин” (Москва). Сертифицированный клинический тренер
+                    по Cellenis PRP
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" class="study__form">
+          <span class="study__title"> Записаться На Мероприятие </span>
+
+          <div class="study__form_column">
+            <label class="hero-form__label">
+              <span>Имя*</span>
+              <input type="text" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label">
+              <span>Телефон*</span>
+              <input type="tel" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label">
+              <span>Город*</span>
+              <input type="text" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label">
+              <span>E-mail*</span>
+              <input type="email" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label">
+              <span>Учреждение*</span>
+              <input type="text" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label">
+              <span>Должность*</span>
+              <input type="text" class="hero-form__input" required="" />
+            </label>
+            <label class="hero-form__label select">
+              <span>Событие*</span>
+              <select type="text" class="hero-form__input" required="">
+                <option value="Событие 1">Событие 1</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="study__button">
+        <button type="submit" class="hero-form__button">
+          Отправить заявку
+        </button>
+      </div>
+
+      <div class="study__tips">
+        <span class="hero-form__text">
+          * Нажимая на кнопку «Отправить заявку», вы даете
+          <a href="">согласие на обработку своих персональных данных</a>
+        </span>
+        <span class="hero-form__text">
+          ** Только для клиник и медицинских центров
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="video" class="video">
+  <div class="container">
+    <div class="video__inner">
+      <h2 class="title">Видео</h2>
+
+      <div class="video__wrapper">
+        <div class="swiper-container video__container">
+          <div class="swiper-wrapper">
+            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" class="swiper-slide video__item">
+              <img
+                decoding="async"
+                src="images/dist/video-placeholder.jpg"
+                alt=""
+              />
+
+              <p class="video__item_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" class="swiper-slide video__item">
+              <img
+                decoding="async"
+                src="images/dist/video-placeholder.jpg"
+                alt=""
+              />
+
+              <p class="video__item_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" class="swiper-slide video__item">
+              <img
+                decoding="async"
+                src="images/dist/video-placeholder.jpg"
+                alt=""
+              />
+
+              <p class="video__item_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" class="swiper-slide video__item">
+              <img
+                decoding="async"
+                src="images/dist/video-placeholder.jpg"
+                alt=""
+              />
+
+              <p class="video__item_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="feedback" class="feedback">
+  <div class="container container--tiny">
+    <div class="feedback__inner">
+      <h2 class="title">Мнения врачей</h2>
+
+      <div class="feedback__wrapper">
+        <div class="swiper-container feedback__container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide feedback__item">
+              <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="feedback__item_info">
+                <span class="feedback__item_info--position">
+                  Д.м.н. дерматолог из Франции
+                </span>
+                <span class="feedback__item_info--name"
+                  >Bertrand Denis Pusel</span
+                >
+
+                <p class="feedback__item_info--desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+
+              <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="250" class="feedback__item_img">
+                <img decoding="async" src="images/dist/feedback-placeholder.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide feedback__item">
+                <div class="feedback__item_info">
+                  <span class="feedback__item_info--position">
+                    Д.м.н. дерматолог из Франции
+                  </span>
+                  <span class="feedback__item_info--name"
+                    >Bertrand Denis Pusel</span
+                  >
+  
+                  <p class="feedback__item_info--desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur.
+                  </p>
+                </div>
+  
+                <div class="feedback__item_img">
+                  <img decoding="async" src="images/dist/feedback-placeholder.jpg" alt="">
+                </div>
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="media" class="media">
+    <div class="container">
+        <div class="media__inner">
+            <h2 class="title">
+                Публикации в СМИ и Партнеры
+            </h2>
+
+            <div class="media__wrapper">
+                <div class="swiper-container media__container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide media__item">
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="media__item_publish">
+                                <img decoding="async" src="images/dist/media-placeholder.jpg" alt="">
+                            </div>
+
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="250" class="media__item_partner">
+                                <img decoding="async" src="images/dist/partner-placeholder.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide media__item">
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="media__item_publish">
+                                <img decoding="async" src="images/dist/media-placeholder.jpg" alt="">
+                            </div>
+
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="250" class="media__item_partner">
+                                <img decoding="async" src="images/dist/partner-placeholder.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide media__item">
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="media__item_publish">
+                                <img decoding="async" src="images/dist/media-placeholder.jpg" alt="">
+                            </div>
+
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="250" class="media__item_partner">
+                                <img decoding="async" src="images/dist/partner-placeholder.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide media__item">
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100" class="media__item_publish">
+                                <img decoding="async" src="images/dist/media-placeholder.jpg" alt="">
+                            </div>
+
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="250" class="media__item_partner">
+                                <img decoding="async" src="images/dist/partner-placeholder.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="socials" class="socials">
+  <div class="container">
+    <div class="socials__inner">
+      <h2 class="title">Социальные сети</h2>
+
+      <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="100" class="socials__wrapper">
+        <div class="swiper-container socials__container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide socials__item">
+              <img
+                decoding="async"
+                src="images/dist/socials-placeholder.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide socials__item">
+              <img
+                decoding="async"
+                src="images/dist/socials-placeholder.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide socials__item">
+              <img
+                decoding="async"
+                src="images/dist/socials-placeholder.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="map">  
+    <div class="container">
+        <div class="map__inner">
+            <h2 class="title">
+                Где Пройти Процедуру
+            </h2>
+
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="map__wrapper">
+                <div class="map__content">
+                    <div class="map__header">
+                        <select class="map__header_select" name="region">
+                            <option value="moscow">Москва</option>
+                        </select>
+                    </div>
+                    <div class="map__body">
+                        <div class="map__item">
+                            <a href="" class="map__item_logo">
+                                <img src="images/dist/quotes.svg" width="60" alt="">
+                            </a>
+
+                            <span class="map__item_title">
+                                Клиника
+                            </span>
+                            <span class="map__item_text">
+                                Москва, ул. Московская 199
+                            </span>
+
+                            <div class="map__item_links">
+                                <a href="tel:+7 (495) 120 03 88" class="map__item_link">+7 (495) 120 03 88</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="map-container" class="map__container">
+                </div>
+            </div>
+
+            <span class="map__tip">
+                На сайте представлены клиники в которых применяется ТОЛЬКО оригинальная продукция B-TWIN SYSTEM
+            </span>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <a href="" class="footer__logo">
+                <img src="images/dist/logo.svg" width="155" height="155" alt="">
+            </a>
+
+            <div class="footer__socials">
+                <a href="" class="footer__socials_item">
+                    <img src="images/dist/yt.svg" width="79" height="56" alt="">
+                </a>
+                <a href="" class="footer__socials_item">
+                    <img src="images/dist/vk.svg" width="68" height="56" alt="">
+                </a>
+            </div>
+
+            <div class="footer__info">
+                <span class="footer__info_text">
+                    Официальный представитель в России
+                </span>
+                <hr>
+                <span class="footer__info_text">
+                    ООО «Фирма »САЛЮТА», Мамоновский пер., д.4, оф. 1а123001, Москва, Россия
+                </span>
+            </div>
+
+            <div class="footer__info">
+                <span class="footer__info_text">
+                    Производитель
+                </span>
+                <hr>
+                <span class="footer__info_text">
+                    Gp Dermal Solution S.r.l.Piazza Renato Simoni, 337122 Verona, Italy
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/swiper.js"></script>
+<script src="js/aosnext.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=70911650-3a88-477e-a2ce-8509010c4745&amp;ver=5.3.4"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Daniil Begma</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="./fonts/FuturaPT-Medium.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/FuturaPT-Demi.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/PlayfairDisplay-SemiBold.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/PlayfairDisplay-Bold.woff2" as="font" crossorigin="anonymous" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()" x-init="preloader()">
+		<div class="preloader">
+			<div class="preloader__inner">
+				<div class="preloader__logo">
+					<video src="images/preloader.mp4" playsinline autoplay muted preload="auto"></video>
+				</div>
+
+				<div class="preloader__anim">
+					<img class="preloader__anim_top" src="images/dist/wave2.svg" alt="">
+					<img class="preloader__anim_bottom" src="images/dist/wave1.svg" alt="">
+					</div>
+			</div>
+		</div>
+
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__burger_wrapper">
+						<button type="button" class="header__burger" @click="toggleNav">
+							<svg
+								class="header-burger"
+								width="27"
+								height="18"
+								viewBox="0 0 27 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M13.5 18H0V15H13.5V18ZM27 10.5H0V7.5H27V10.5ZM27 3H13.5V0H27V3Z" fill="#353535" />
+								<defs>
+									<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#353535" />
+										<stop offset="100%" stop-color="#353535" />
+									</linearGradient>
+								</defs>
+							</svg>
+
+							<svg
+								class="header-close"
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M20 2.47152L17.5285 0L10 7.52848L2.47152 0L0 2.47152L7.52848 10L0 17.5285L2.47152 20L10 12.4715L17.5285 20L20 17.5285L12.4715 10L20 2.47152Z"
+									fill="#353535"
+								/>
+								<defs>
+									<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#353535" />
+										<stop offset="100%" stop-color="#353535" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</button>
+					</div>
+
+					<a href="" class="header__logo">
+						<svg width="190" height="20" viewBox="0 0 190 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M105.596 9.57195C107.459 8.59264 108.391 7.11841 108.391 5.14927C108.409 4.53094 108.302 3.91552 108.077 3.34077C107.852 2.76603 107.514 2.24409 107.084 1.80699C105.933 0.633924 104.234 0.0484367 101.987 0.0505428H100.348V3.13695H101.534C102.627 3.13695 103.472 3.36124 104.065 3.80351C104.354 4.01262 104.586 4.29179 104.742 4.61563C104.898 4.93947 104.971 5.29772 104.956 5.65787C104.979 6.05759 104.9 6.45649 104.727 6.81614C104.554 7.17579 104.293 7.48406 103.969 7.71126C103.31 8.17564 102.416 8.40626 101.282 8.40626H100.351V11.3505H102.037C104.712 11.3505 106.048 12.2382 106.046 14.0136C106.068 14.4149 105.988 14.8152 105.816 15.1767C105.643 15.5382 105.382 15.8489 105.059 16.0796C104.397 16.5535 103.475 16.7872 102.289 16.7872H100.348V19.8768H102.258C104.467 19.8768 106.22 19.404 107.518 18.4584C108.817 17.5128 109.467 16.1723 109.469 14.4369C109.469 12.0908 108.178 10.4691 105.596 9.57195Z" fill="#353535"/>
+							<path d="M123.658 0.12323H112.888V3.36758H123.658V0.12323Z" fill="#353535"/>
+							<path d="M122.308 8.27039H116.162V11.5369H122.308V8.27039Z" fill="#353535"/>
+							<path d="M123.721 16.6703H112.808V19.9147H123.721V16.6703Z" fill="#353535"/>
+							<path d="M142.003 8.27991H137.397V11.5243H142.003V8.27991Z" fill="#353535"/>
+							<path d="M142.003 15.6373C140.705 16.4534 139.203 16.8703 137.677 16.8378C135.708 16.8378 134.112 16.1923 132.888 14.9013C131.665 13.6103 131.052 11.9676 131.05 9.97314C131.015 8.18182 131.669 6.44734 132.873 5.13979C133.437 4.4966 134.131 3.98451 134.906 3.63837C135.682 3.29222 136.523 3.12012 137.37 3.13378C138.39 3.1079 139.407 3.28053 140.364 3.6424C140.941 3.8879 141.491 4.19612 142.003 4.56168V0.805558C141.898 0.761331 141.792 0.717106 141.693 0.679197C140.349 0.216044 138.935 -0.00316542 137.516 0.0315845C134.617 0.0315845 132.218 1.00247 130.317 2.94424C129.396 3.85639 128.668 4.95041 128.178 6.15913C127.688 7.36785 127.445 8.66575 127.466 9.97314C127.466 12.8479 128.398 15.2224 130.261 17.0968C132.124 18.9712 134.56 19.9094 137.569 19.9115C139.082 19.9207 140.586 19.6532 142.006 19.1218L142.003 15.6373Z" fill="#353535"/>
+							<path d="M165.525 16.6419H162.338V19.8863H165.525V16.6419Z" fill="#353535"/>
+							<path d="M149.978 16.6419H146.786V19.8863H149.978V16.6419Z" fill="#353535"/>
+							<path d="M162.345 13.4007H165.531V0.069519H162.124L156.193 9.44561L150.264 0.069519H146.792V13.4007H149.985V5.73371L156.081 15.0245H156.193L162.345 5.68001V13.4007Z" fill="#353535"/>
+							<path d="M177.817 8.27987L179.783 4.11939L181.767 8.27987H185.034L181.426 0.034729H178.252L174.646 8.27987H177.817Z" fill="#353535"/>
+							<path d="M186.305 11.54H183.152H176.441H173.373L169.677 20H173.183L175.314 14.5727H184.249L186.382 20H190L186.305 11.54Z" fill="#353535"/>
+							<path d="M26.9035 8.46312L28.86 4.19523L30.8321 8.46312H34.0836L30.4936 0H27.3352L23.7451 8.46312H26.9035Z" fill="#353535"/>
+							<path d="M35.3511 11.7833H32.2145H25.5344H22.4785L18.7983 19.8452H22.2921L24.4132 14.8823H33.3014L35.4288 19.8452H39.0313L35.3511 11.7833Z" fill="#353535"/>
+							<path d="M82.8013 19.8673V0.120056H86.0311V16.8125H89.3541V19.8673H82.8013Z" fill="#353535"/>
+							<path d="M50.1118 4.98186L46.4131 0.12323H43.3013V19.9053H46.6025V5.87272L50.1118 10.4723V4.98186Z" fill="#353535"/>
+							<path d="M56.649 0.12323V13.704L53.2856 9.24027V14.6517L57.1397 19.7631H59.9533V0.12323H56.649Z" fill="#353535"/>
+							<path d="M68.2113 6.64032H65.0591V19.7725H68.2113V6.64032Z" fill="#353535"/>
+							<path d="M68.2113 0.110596H65.0591V3.37706H68.2113V0.110596Z" fill="#353535"/>
+							<path d="M77.5001 0.0663452H74.3262V6.26126H77.5001V0.0663452Z" fill="#353535"/>
+							<path d="M77.5001 11.5558H74.3262V19.8421H77.5001V11.5558Z" fill="#353535"/>
+							<path d="M75.8663 10.5765C76.7427 10.5765 77.4532 9.83965 77.4532 8.93066C77.4532 8.02167 76.7427 7.28479 75.8663 7.28479C74.9898 7.28479 74.2793 8.02167 74.2793 8.93066C74.2793 9.83965 74.9898 10.5765 75.8663 10.5765Z" fill="#353535"/>
+							<path d="M13.913 2.88739C12.0331 1.02566 9.60973 0.0947876 6.64286 0.0947876H0V5.34514H3.17391V3.25385H6.64286C8.61594 3.25385 10.2081 3.88566 11.4193 5.14928C12.6304 6.4129 13.236 8.0156 13.236 9.95737C13.236 11.9265 12.6304 13.5334 11.4193 14.7781C10.2081 16.0228 8.61594 16.6461 6.64286 16.6483H3.17391V15.0687H0V19.8073H6.64286C9.5911 19.8073 12.0103 18.8701 13.9006 16.9958C15.7909 15.1214 16.736 12.7784 16.736 9.96685C16.736 7.11316 15.795 4.75334 13.913 2.88739Z" fill="#353535"/>
+							<path d="M3.18012 8.44733H0V11.7454H3.18012V8.44733Z" fill="#353535"/>
+							
+							<defs>
+								<linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse">
+									<stop offset="0%" stop-color="#353535" />
+									<stop offset="100%" stop-color="#353535" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</a>
+
+					<div class="header__block">
+						<div class="header__lang">
+							<a href="" class="header__lang_link">EN</a>
+							<span class="header__lang_sep"> | </span>
+							<a href="" class="header__lang_link active">RU</a>
+						</div>
+
+						<div class="header__hire">
+							<button type="button" class="button-default" @click="openPopup('contacts')">Нанять меня</button>
+						</div>
+					</div>
+
+					<nav x-cloak x-show.transition.opacity="nav == true" class="header__nav">
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
+						<div class="header__nav_link empty"></div>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('specs')">Навыки</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('experience')">Опыт</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('reviews')">Отзывы</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="notifications" @click="hideNotification(event.target)">
+				<div class="notifications__item">Сообщение отправлено! Спасибо :3</div>
+				<div class="notifications__item">Скоро отвечу Вам 😇</div>
+				<div class="notifications__item">Хорошего дня)</div>
+			</div>
+		</header>
+
+
+<main>
+<section id="hero" class="hero">
+	<div class="container">
+		<div class="hero__inner">
+			<div class="hero__info">
+				<div class="hero__info_main">
+					<span class="hero__info_text uppercase">Web & UX/UI Дизайнер</span>
+					<h1 class="hero__info_name">
+						<span>Daniil</span>
+						<span>Begma</span>
+					</h1>
+				</div>
+
+				<div class="hero__info_slogan">
+					<p class="hero__info_text">
+						Future Is Near - главный слоган деятельности данного дизайнера! Но что это значит? Имеет ли он
+						хоть какой-то смысл? Ознакомившись с сайтом, каждый находит ответ для себя сам
+					</p>
+					<button type="button" class="hero__info_nav gradient-link" @click="scrollToElem('about')">
+						Чтоооооооооо →
+					</button>
+				</div>
+
+				<div class="hero__bg">
+					<span>DESIGN</span>
+				</div>
+
+				<div class="hero__scroller">
+					<button type="button" class="hero__scroller_item" @click="scrollToElem('about')"></button>
+				</div>
+			</div>
+
+			<div class="hero__slider">
+				<div class="hero__slider_wrapper">
+					<div class="hero__slider_container">
+						<div class="swiper-container hero-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide hero__slider_item">
+									<img decoding="async" src="images/dist/slider1.jpg" alt="" />
+								</div>
+								<div class="swiper-slide hero__slider_item">
+									<img
+										decoding="async"
+										class="swiper-lazy"
+										data-src="images/dist/slider2.jpg"
+										alt=""
+									/>
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide hero__slider_item">
+									<img
+										decoding="async"
+										class="swiper-lazy"
+										data-src="images/dist/slider3.jpg"
+										alt=""
+									/>
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide hero__slider_item">
+									<img
+										decoding="async"
+										class="swiper-lazy"
+										data-src="images/dist/slider4.jpg"
+										alt=""
+									/>
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide hero__slider_item">
+									<img
+										decoding="async"
+										class="swiper-lazy"
+										data-src="images/dist/slider5.jpg"
+										alt=""
+									/>
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+							</div>
+							<div class="hero__slider_pagination">
+								<div class="hero__slider_pagination--arrow swiper-arrow-prev">
+									<svg
+										width="45"
+										height="10"
+										viewBox="0 0 41 6"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M40 3.49976C40.2761 3.49976 40.5 3.2759 40.5 2.99976C40.5 2.72361 40.2761 2.49976 40 2.49976V3.49976ZM0 2.99976L5 5.88651V0.113004L0 2.99976ZM40 2.49976L4.5 2.49976V3.49976L40 3.49976V2.49976Z"
+											fill="#353535"
+										/>
+
+										<defs>
+											<linearGradient id="left-slider-gradient" gradientUnits="userSpaceOnUse">
+												<stop offset="0%" stop-color="#353535" />
+												<stop offset="100%" stop-color="#353535" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="hero__slider_pagination--counter"></div>
+								<div class="hero__slider_pagination--arrow swiper-arrow-next">
+									<svg
+										width="45"
+										height="10"
+										viewBox="0 0 41 6"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1 2.49976C0.723858 2.49976 0.5 2.72361 0.5 2.99976C0.5 3.2759 0.723858 3.49976 1 3.49976L1 2.49976ZM41 2.99976L36 0.113011L36 5.88651L41 2.99976ZM1 3.49976L36.5 3.49976L36.5 2.49976L1 2.49976L1 3.49976Z"
+											fill="#353535"
+										/>
+
+										<defs>
+											<linearGradient id="right-slider-gradient" gradientUnits="userSpaceOnUse">
+												<stop offset="0%" stop-color="#353535" />
+												<stop offset="100%" stop-color="#353535" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="hero__socials">
+						<a href="" target="_blank" class="hero__socials_link">
+							<svg
+								width="28"
+								height="18"
+								viewBox="0 0 28 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M27.652 1.89055C27.8724 2.54301 27.1539 4.04163 25.4966 6.38641C25.2667 6.71264 24.9553 7.14591 24.5625 7.68623C24.1793 8.20616 23.9159 8.57317 23.7722 8.78725C23.6285 9.00134 23.4824 9.25366 23.3339 9.54421C23.1854 9.83476 23.128 10.0488 23.1615 10.1865C23.195 10.3241 23.2573 10.5 23.3483 10.714C23.4393 10.9281 23.595 11.1473 23.8153 11.3716C24.0356 11.5959 24.3087 11.866 24.6344 12.1821C24.6727 12.2025 24.6967 12.2229 24.7062 12.2433C26.057 13.5788 26.9719 14.7053 27.4509 15.6228C27.4796 15.6738 27.5107 15.7375 27.5443 15.8139C27.5778 15.8904 27.6113 16.0255 27.6449 16.2192C27.6784 16.4129 27.676 16.5862 27.6377 16.7391C27.5993 16.892 27.4796 17.0322 27.2784 17.1596C27.0772 17.2871 26.7946 17.3508 26.4306 17.3508L22.7519 17.412C22.522 17.4629 22.2538 17.4374 21.9472 17.3355C21.6407 17.2335 21.3916 17.1214 21.2 16.9991L20.9126 16.8156C20.6252 16.6015 20.2899 16.2752 19.9067 15.8369C19.5235 15.3985 19.1954 15.0035 18.9224 14.6517C18.6494 14.3 18.3572 14.0044 18.0458 13.7648C17.7345 13.5252 17.4639 13.4462 17.234 13.5278C17.2052 13.538 17.1669 13.5558 17.119 13.5813C17.0711 13.6068 16.9897 13.6807 16.8747 13.803C16.7598 13.9254 16.6568 14.0757 16.5658 14.2542C16.4748 14.4326 16.3933 14.6976 16.3215 15.0493C16.2496 15.4011 16.2185 15.7961 16.2281 16.2345C16.2281 16.3874 16.2113 16.5276 16.1778 16.655C16.1442 16.7824 16.1083 16.8767 16.07 16.9379L16.0125 17.0144C15.8401 17.2081 15.5862 17.3202 15.2509 17.3508H13.5984C12.9182 17.3916 12.2189 17.3075 11.5004 17.0985C10.7819 16.8895 10.1521 16.6193 9.61079 16.288C9.06953 15.9567 8.57617 15.6202 8.13071 15.2787C7.68524 14.9372 7.34755 14.6441 7.11764 14.3994L6.75839 14.0324C6.6626 13.9305 6.53087 13.7776 6.36322 13.5737C6.19558 13.3698 5.8531 12.9059 5.33579 12.1821C4.81847 11.4583 4.31074 10.6886 3.81259 9.87299C3.31444 9.05741 2.72767 7.98187 2.05229 6.64637C1.37691 5.31087 0.75183 3.92439 0.177039 2.48694C0.11956 2.32383 0.0908203 2.1862 0.0908203 2.07406C0.0908203 1.96191 0.10519 1.88036 0.13393 1.82938L0.191409 1.73763C0.335106 1.54393 0.608132 1.44708 1.01049 1.44708L4.9478 1.4165C5.06276 1.43689 5.17293 1.47002 5.27831 1.5159C5.38369 1.56177 5.46032 1.6051 5.50822 1.64588L5.58007 1.69176C5.73335 1.8039 5.84831 1.96701 5.92495 2.1811C6.11654 2.69083 6.33688 3.21841 6.58596 3.76382C6.83503 4.30924 7.03142 4.72467 7.17512 5.01012L7.40503 5.45359C7.68285 6.06527 7.95108 6.5954 8.20974 7.04396C8.4684 7.49253 8.70071 7.8417 8.90667 8.09147C9.11264 8.34124 9.31142 8.53748 9.50302 8.68021C9.69462 8.82294 9.85747 8.8943 9.99159 8.8943C10.1257 8.8943 10.255 8.86881 10.3796 8.81784C10.3987 8.80764 10.4227 8.78216 10.4514 8.74138C10.4802 8.7006 10.5376 8.58846 10.6239 8.40495C10.7101 8.22145 10.7747 7.98187 10.8179 7.68623C10.861 7.39058 10.9065 6.9777 10.9544 6.44757C11.0023 5.91745 11.0023 5.28028 10.9544 4.53607C10.9352 4.12828 10.8921 3.75618 10.825 3.41975C10.758 3.08333 10.6909 2.84885 10.6239 2.71632L10.5376 2.53282C10.2981 2.1862 9.891 1.96701 9.31621 1.87526C9.19167 1.85487 9.21562 1.73253 9.38806 1.50825C9.54134 1.31455 9.72336 1.16163 9.93411 1.04949C10.4418 0.784429 11.5866 0.662093 13.3685 0.682482C14.154 0.692677 14.8007 0.758943 15.3084 0.881279C15.5 0.932252 15.6605 1.00107 15.7898 1.08772C15.9191 1.17438 16.0173 1.29671 16.0844 1.45473C16.1514 1.61275 16.2017 1.77586 16.2353 1.94407C16.2688 2.11229 16.2856 2.34422 16.2856 2.63986C16.2856 2.93551 16.2808 3.21586 16.2712 3.48092C16.2616 3.74598 16.2496 4.10535 16.2353 4.55901C16.2209 5.01267 16.2137 5.4332 16.2137 5.8206C16.2137 5.93274 16.2089 6.14683 16.1993 6.46287C16.1898 6.7789 16.1874 7.02357 16.1921 7.19688C16.1969 7.37019 16.2137 7.57664 16.2424 7.81621C16.2712 8.05579 16.3263 8.25458 16.4077 8.4126C16.4891 8.57062 16.5969 8.6955 16.731 8.78725C16.8077 8.80764 16.8891 8.82803 16.9753 8.84842C17.0615 8.86881 17.1861 8.81274 17.3489 8.68021C17.5118 8.54768 17.6938 8.37182 17.895 8.15263C18.0961 7.93345 18.3452 7.59193 18.6422 7.12807C18.9392 6.66421 19.2649 6.11625 19.6193 5.48418C20.1941 4.42393 20.7066 3.27703 21.1569 2.04347C21.1952 1.94153 21.2431 1.85232 21.3006 1.77586C21.3581 1.6994 21.4108 1.64588 21.4587 1.6153L21.5161 1.56942L21.588 1.53119L21.7748 1.48531L22.0622 1.47767L26.2007 1.44708C26.5743 1.39611 26.8809 1.40885 27.1204 1.48531C27.3599 1.56177 27.5083 1.64588 27.5658 1.73763L27.652 1.89055Z"
+									fill="white"
+								/>
+								<defs>
+									<linearGradient id="vk-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#fff" />
+										<stop offset="100%" stop-color="#fff" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+						<a href="" target="_blank" class="hero__socials_link">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172008 16.953 0.0789456C15.2959 -0.0141173 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141173 7.04652 0.0789456C5.12526 0.172008 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z"
+									fill="white"
+								/>
+								<defs>
+									<linearGradient id="inst-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#fff" />
+										<stop offset="100%" stop-color="#fff" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+						<a href="" target="_blank" class="hero__socials_link">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M22.38 2.31093L1.12065 10.3087C-0.330214 10.8772 -0.321821 11.6668 0.85446 12.0189L6.31259 13.68L18.9411 5.90682C19.5383 5.55238 20.0838 5.74305 19.6354 6.13142L9.40378 15.1399H9.40138L9.40378 15.141L9.02727 20.6296C9.57884 20.6296 9.82225 20.3828 10.1316 20.0915L12.7827 17.5765L18.2972 21.5502C19.314 22.0965 20.0443 21.8158 20.2973 20.632L23.9172 3.98839C24.2877 2.53904 23.3501 1.8828 22.38 2.31093Z"
+									fill="white"
+								/>
+								<defs>
+									<linearGradient id="tg-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#fff" />
+										<stop offset="100%" stop-color="#fff" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+						<a href="" target="_blank" class="hero__socials_link">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M4.70544 0.00600052C2.12023 0.00600052 0.00439453 2.12179 0.00439453 4.70705V19.2952C0.00439453 21.8804 2.12019 23.9955 4.70544 23.9955H19.2936C21.8789 23.9955 23.9939 21.8805 23.9939 19.2952V4.70705C23.9939 2.12184 21.8789 0.00600052 19.2936 0.00600052H4.70544ZM5.88783 3.96475C7.12738 3.96475 7.89089 4.7785 7.91446 5.84815C7.91446 6.89419 7.12733 7.73081 5.86385 7.73081H5.84059C4.62463 7.73081 3.83871 6.89424 3.83871 5.84815C3.83871 4.77852 4.64842 3.96475 5.8878 3.96475H5.88783ZM16.5697 8.96419C18.9536 8.96419 20.7407 10.5223 20.7407 13.8707V20.1214H17.1178V14.2897C17.1178 12.8243 16.5935 11.8245 15.2824 11.8245C14.2815 11.8245 13.6849 12.4984 13.423 13.1494C13.3273 13.3823 13.3038 13.7075 13.3038 14.0333V20.1214H9.68091C9.68091 20.1214 9.72845 10.2427 9.68091 9.21984H13.3045V10.7636C13.786 10.0208 14.6471 8.96417 16.5697 8.96417V8.96419ZM4.0524 9.22063H7.67527V20.1215H4.0524V9.22063Z"
+									fill="white"
+								/>
+								<defs>
+									<linearGradient id="lin-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#fff" />
+										<stop offset="100%" stop-color="#fff" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="about" class="bio">
+	<div class="container">
+		<div class="bio__inner">
+			<h2 class="title">
+				<span>Обо мне</span>
+			</h2>
+
+			<div class="bio__wrapper">
+				<div class="bio__img">
+					<img decoding="async" src="images/dist/bio.png" width="493" height="662" alt="Фото" />
+				</div>
+
+				<div class="bio__content">
+					<div class="bio__tabs">
+						<button
+							type="button"
+							class="bio__tabs_item"
+							:class="{'active' : bioTab == 'exp'}"
+							@click="selectTab('exp')"
+						>
+							Опыт
+						</button>
+						<button
+							type="button"
+							class="bio__tabs_item"
+							:class="{'active' : bioTab == 'approach'}"
+							@click="selectTab('approach')"
+						>
+							Подход
+						</button>
+						<button
+							type="button"
+							class="bio__tabs_item"
+							:class="{'active' : bioTab == 'bio'}"
+							@click="selectTab('bio')"
+						>
+							Био
+						</button>
+					</div>
+
+					<div x-show="bioTab == 'exp'" class="bio__info">
+						<div class="bio__info_desc">
+							<p>
+								Здравствуйте, меня зовут Даниил Бегма. В дизайне мой опыт составляет более 4-х лет и за
+								такой небольшой промежуток времени, мне удалось разработать 27+ успешных проектов,
+								сформировать довольную клиентскую базу и выйти на компании мирового уровня.
+							</p>
+
+							<p>
+								Также принимал участие в конкурсах «Фестиваль нового дизайна «Среда» 2019», «Mail Design
+								Cup 2019» и закончил 14 курсов от Skillbox, 3 от Videosmile для повышения своих навыков,
+								ведь развитие как-никак важно.
+							</p>
+						</div>
+
+						<div class="bio__meta">
+							<div class="bio__meta_item">
+								<span class="gradient-text">Figma</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe Photoshop</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe Illustrator</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Cinema 4D</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Maya</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe After Effects</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe XD</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe Premiere Pro</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe Lightroom</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Adobe Audition</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Sony Vegas</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Tilda</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Readymag</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">и другие</span>
+							</div>
+						</div>
+					</div>
+
+					<div x-cloak x-show="bioTab == 'approach'" class="bio__info">
+						<div class="bio__info_desc">
+							<p>
+								В своих работах использую простоту, чистоту и минимализм, потому что мои творения должны
+								быть современными, выделяющимися, а также понятными для пользователей любых возрастов.
+							</p>
+
+							<p>
+								Всегда заинтересован в постоянном развитии, поэтому: прохожу курсы, чтобы больше
+								практиковаться; читаю профильную литературу, дабы больше знать; участвую в тендерах, ибо
+								не боюсь бросить себе вызов. Каждый день мои навыки улучшаются, а работы становится
+								совершенней.
+							</p>
+						</div>
+
+						<div class="bio__meta">
+							<div class="bio__meta_item">
+								<span class="gradient-text">Ответственность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Дисциплинированность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Объективность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Трудолюбие</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Целеустремленность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Инициативность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Стрессоустойчивость</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Доверие</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Самостоятельность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Внимательность</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Отзывчивость</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Любознательность</span>
+							</div>
+						</div>
+					</div>
+
+					<div x-cloak x-show="bioTab == 'bio'" class="bio__info">
+						<div class="bio__info_desc">
+							<p>
+								Моё имя - Даниил Бегма. Я родился в небольшом городке под названием Оренбург. С самого
+								детства меня всегда интересовала работа в Adobe Photoshop и Cinema 4D, и уже с этого
+								времени начал практиковать свои скиллы и пытаться набраться опыта.
+							</p>
+
+							<p>
+								Как у любого человека, у меня есть свои хобби. В данный момент увлекаюсь спортом,
+								изучением языков (English & 日本語), игрой на электрогитаре, просмотром аниме и чтением
+								манги (в оригинале).
+							</p>
+						</div>
+
+						<div class="bio__meta bio__meta--grid">
+							<div class="bio__meta_item">
+								<span class="gradient-text">Возраст:</span>
+								<span>22 года</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Национальность:</span>
+								<span>Русский</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Пол:</span>
+								<span>Мужской</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Адрес:</span>
+								<span>Москва, Россия</span>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Телефон:</span>
+								<a href="tel:+79328413990">+7 (932) 84-139-90</a>
+							</div>
+							<div class="bio__meta_item">
+								<span class="gradient-text">Почта:</span>
+								<a href="mailto:begma00@mail.ru">begma00@mail.ru</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="bio__buttons">
+						<a href="" class="button-default button-default--gradient">Написать</a>
+						<button type="button" class="button-default" @click="openPopup('contacts')">Нанять</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="projects" class="projects">
+	<div class="container">
+		<div class="projects__inner">
+			<h2 class="title">
+				<span>Проекты</span>
+			</h2>
+
+			<div class="projects__wrapper">
+				<div @click="openPopup('rossbank')" class="projects__item" style="background-image: url(./images/dist/work1.jpg)">
+					<div class="projects__item_button-wrapper">
+						<button type="button" class="projects__item_button">Россельхозбанк</button>
+					</div>
+				</div>
+
+				<div @click="openPopup('papajohns')" class="projects__item" style="background-image: url(./images/dist/work2.jpg)">
+					<div class="projects__item_button-wrapper">
+						<button type="button" class="projects__item_button">Папа Джонс</button>
+					</div>
+				</div>
+
+				<div @click="openPopup('psih')" class="projects__item" style="background-image: url(./images/dist/work3.jpg)">
+					<div class="projects__item_button-wrapper">
+						<button type="button" class="projects__item_button">Псих</button>
+					</div>
+				</div>
+
+				<div @click="openPopup('animedia')" class="projects__item" style="background-image: url(./images/dist/work4.jpg)">
+					<div class="projects__item_button-wrapper">
+						<button type="button" class="projects__item_button">Animedia.TV</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="projects__button">
+				<a href="" class="button-default">Смотреть все</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="companies" class="comps">
+	<div class="container">
+		<div class="comps__inner">
+			<h2 class="title title--white">
+				<span>Компании</span>
+			</h2>
+
+			<div class="comps__wrapper">
+				<div class="swiper-container comps-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp1.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp2.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp3.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp4.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp5.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp6.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp7.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp8.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp9.png" alt="" />
+						</div>
+						<div class="swiper-slide comps__item">
+							<img decoding="async" src="images/dist/comp10.png" alt="" />
+						</div>
+					</div>
+
+					<div class="comps__nav">
+						<div class="comps__nav_arrow comps__nav_arrow--prev">
+							<img decoding="async" src="images/dist/comps-arrow-left.svg" alt="">
+						</div>
+						<div class="comps__nav_arrow comps__nav_arrow--next">
+							<img decoding="async" src="images/dist/comps-arrow-right.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="specs" class="specs">
+	<div class="container">
+		<div class="specs__inner">
+			<h2 class="title">
+				<span>Навыки специализаций</span>
+			</h2>
+
+			<div class="specs__wrapper">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
+					<div class="specs__item_img">
+						<video src="images/card1.mp4" playsinline muted loop preload="auto"></video>
+					</div>
+					<div class="specs__item_info">
+						<h3 class="specs__item_title">Web-дизайн</h3>
+
+						<div class="specs__item_desc">
+							<p>1) брифинг с заказчиком (в живую и удаленно);</p>
+							<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
+							<p>3) отрисовка иконок;</p>
+							<p>4) редизайн сайтов;</p>
+							<p>5) адаптивный дизайн;</p>
+							<p>6) mobile first;</p>
+							<p>7) создание:</p>
+							<p>а) дизайн-концепций;</p>
+							<p>б) gif-анимаций;</p>
+							<p>...</p>
+						</div>
+					</div>
+					<div class="specs__item_button">
+						<button @click="openPopup('spec1')" type="button" class="button-default button-default--sm">Подробнее</button>
+					</div>
+				</div>
+
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
+					<div class="specs__item_img">
+						<video src="images/card2.mp4" playsinline muted loop preload="auto"></video>
+					</div>
+					<div class="specs__item_info">
+						<h3 class="specs__item_title">UX/UI-дизайн</h3>
+
+						<div class="specs__item_desc">
+							<p class="gradient-text">1) UX-исследование:</p>
+							<p>а) интервью (направленное и неориентированное);</p>
+							<p>б) аудит (дизайна, бизнеса (покупатель, продукт, компания, конкуренты);</p>
+							<p>в) стратегии и идеи;</p>
+							<p>г) аналитика (создание UP, CJM, UJM, EJM, Отчеты (Word, Excel)).</p>
+							<br /><br />
+							<p class="gradient-text">2) UX-проектирование:</p>
+							<p>...</p>
+						</div>
+					</div>
+					<div class="specs__item_button">
+						<button @click="openPopup('spec2')" type="button" class="button-default button-default--sm">Подробнее</button>
+					</div>
+				</div>
+
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
+					<div class="specs__item_img">
+						<video src="images/card3.mp4" playsinline muted loop preload="auto"></video>
+					</div>
+
+					<div class="specs__item_info">
+						<h3 class="specs__item_title">Прочие</h3>
+
+						<div class="specs__item_desc">
+							<p class="gradient-text">1) UI-анимация</p>
+							<p>а) сайты;</p>
+							<p>б) иконки;</p>
+							<p>в) прелоадеры;</p>
+							<p>г) микровзаимодействия.</p>
+							<br /><br />
+							<p class="gradient-text">2) 3D-моделирование:</p>
+							<p>а) Параметрическое;</p>
+							<p>б) Полигональное (Hard Surface)</p>
+							<p>...</p>
+						</div>
+					</div>
+
+					<div class="specs__item_button">
+						<button @click="openPopup('spec3')" type="button" class="button-default button-default--sm">Подробнее</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="experience" class="exp">
+	<div class="container">
+		<div class="exp__inner">
+			<h2 class="title">
+				<span>Опыт работы</span>
+			</h2>
+
+			<div class="exp__wrapper">
+				<div class="exp__item">
+					<div class="exp__item_block">
+						<span>Обязанности</span>
+						<ul>
+							<li>
+								cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и
+								пользователей;
+							</li>
+							<li>проектирование информационных систем;</li>
+							<li>прототипирование с разным уровнем детализации;</li>
+							<li>анимирование интерфейса;</li>
+							<li>тестирование на пользовательской аудитории прототипа решения;</li>
+							<li>защита решений на всех этапах проектирования;</li>
+							<li>
+								сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами
+								маркетинга, аналитики и разработки);
+							</li>
+							<li>участие в создании общего UI-Kit;</li>
+						</ul>
+						<button @click="openPopup('rossbank')" type="button" class="exp__item_button">
+							Подробнее →
+						</button>
+					</div>
+					<div class="exp__item_counter"></div>
+					<div class="exp__item_meta">
+						<span class="exp__item_meta--title"> Mobile Lead UX/UI Designer </span>
+						<span class="exp__item_meta--company gradient-text">Россельхозбанк</span>
+						<span class="exp__item_meta--duration">Июнь 2021 — по настоящее время</span>
+					</div>
+				</div>
+
+				<div class="exp__item">
+					<div class="exp__item_block">
+						<span>Обязанности</span>
+						<ul>
+							<li>
+								cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и
+								пользователей;
+							</li>
+							<li>проектирование информационных систем;</li>
+							<li>прототипирование с разным уровнем детализации;</li>
+							<li>анимирование интерфейса;</li>
+							<li>тестирование на пользовательской аудитории прототипа решения;</li>
+							<li>защита решений на всех этапах проектирования;</li>
+							<li>
+								сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами
+								маркетинга, аналитики и разработки);
+							</li>
+							<li>участие в создании общего UI-Kit;</li>
+						</ul>
+						<button @click="openPopup('papajohns')" type="button" class="exp__item_button">
+							Подробнее →
+						</button>
+					</div>
+					<div class="exp__item_counter"></div>
+					<div class="exp__item_meta">
+						<span class="exp__item_meta--title"> Lead UX/UI-дизайнер </span>
+						<span class="exp__item_meta--company gradient-text">Папа Джонс</span>
+						<span class="exp__item_meta--duration">Май 2020 — по настоящее время</span>
+					</div>
+				</div>
+
+				<div class="exp__item">
+					<div class="exp__item_block">
+						<span>Обязанности</span>
+						<ul>
+							<li>
+								Ведение проекта, ответственность за разработку (подбор команды и точное соблюдение
+								сроков исполнения);
+							</li>
+							<li>Брифинг;</li>
+							<li>
+								Ux-исследование:<br />
+								а) дизайна, бизнеса (покупатель, продукт, компания, конкуренты);<br />
+								б) стратегии и идеи;
+							</li>
+							<li>
+								Ux-проектирование:<br />
+								а) создание ментальных карт (например, сайта);<br />
+								б) скетчинг дизайна сайтов;<br />
+								в) проектирование дизайна сайтов.
+							</li>
+							<li>Визуализация макетов:</li>
+						</ul>
+						<button @click="openPopup('psih')" type="button" class="exp__item_button">Подробнее →</button>
+					</div>
+					<div class="exp__item_counter"></div>
+					<div class="exp__item_meta">
+						<span class="exp__item_meta--title"> Проектная работа </span>
+						<span class="exp__item_meta--company gradient-text">Psih</span>
+						<span class="exp__item_meta--duration">Апрель 2020 — май 2020</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="exp__button">
+				<a href="" class="button-default">Читать полностью</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="reviews" class="reviews">
+	<div class="container">
+		<h2 class="title">
+			<span>Отзывы</span>
+		</h2>
+	</div>
+
+	<div class="reviews__inner">
+		<div class="reviews__wrapper">
+			<div class="swiper-container reviews-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide reviews__item">
+						<div class="reviews__item_info">
+							<div class="reviews__item_meta">
+								<img
+									decoding="async"
+									class="reviews__item_img"
+									src="images/dist/review-placeholder.jpg"
+									alt=""
+								/>
+
+								<div class="reviews__item_about">
+									<span class="reviews__item_about--date">24.06.22</span>
+									<span class="reviews__item_about--name">Андрей Федотов</span>
+									<span class="reviews__item_about--position">Mobile Lead UX/UI Designer</span>
+								</div>
+
+								<div class="reviews__item_additional">
+									<div class="reviews__item_socials">
+										<a href="" target="_blank"><img src="images/dist/vk-icon.svg" alt="" /></a>
+										<a href="" target="_blank"><img src="images/dist/tg-icon.svg" alt="" /></a>
+										<a href="" target="_blank"><img src="images/dist/lin-icon.svg" alt="" /></a>
+									</div>
+
+									<div class="reviews__item_doc">
+										<a href="images/dist/review-placeholder-doc.jpg" target="_blank"
+											><img
+												src="images/dist/review-placeholder-doc.jpg"
+												width="48"
+												height="64"
+												alt=""
+										/></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews__item_desc">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt
+									ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum
+									exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid; Lorem ipsum
+									dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et
+									dolore magna aliqua. Ut enim ad min veniam, quis nostrum exercitationem ullam
+									corporis suscipit laboriosam, nisi ut aliquid.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide reviews__item">
+						<div class="reviews__item_info">
+							<div class="reviews__item_meta">
+								<img
+									decoding="async"
+									class="reviews__item_img"
+									src="images/dist/review-placeholder.jpg"
+									alt=""
+								/>
+
+								<div class="reviews__item_about">
+									<span class="reviews__item_about--date">24.06.22</span>
+									<span class="reviews__item_about--name">Андрей Федотов</span>
+									<span class="reviews__item_about--position">Mobile Lead UX/UI Designer</span>
+								</div>
+
+								<div class="reviews__item_additional">
+									<div class="reviews__item_socials">
+										<a href="" target="_blank"><img src="images/dist/vk-icon.svg" alt="" /></a>
+										<a href="" target="_blank"><img src="images/dist/tg-icon.svg" alt="" /></a>
+										<a href="" target="_blank"><img src="images/dist/lin-icon.svg" alt="" /></a>
+									</div>
+
+									<div class="reviews__item_doc">
+										<a href="images/dist/review-placeholder-doc.jpg" target="_blank"
+											><img
+												src="images/dist/review-placeholder-doc.jpg"
+												width="48"
+												height="64"
+												alt=""
+										/></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews__item_desc">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt
+									ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum
+									exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid; Lorem ipsum
+									dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et
+									dolore magna aliqua. Ut enim ad min veniam, quis nostrum exercitationem ullam
+									corporis suscipit laboriosam, nisi ut aliquid.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="reviews__nav">
+					<div class="reviews__nav_arrow reviews__nav_arrow--prev">
+						<img decoding="async" src="images/dist/comps-arrow-left.svg" alt="" />
+					</div>
+					<div class="reviews__nav_arrow reviews__nav_arrow--next">
+						<img decoding="async" src="images/dist/comps-arrow-right.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="popups">
+	<div @click="closePopup" x-cloak x-show.transition.opacity.duration.300ms="popup != null" class="popups__bg"></div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'contacts'" class="popup popup-contacts">
+		<div class="popup-contacts__inner">
+			<div class="popup-contacts__img">
+				<div class="popup-contacts__socials">
+					<a href="" target="_blank"><img src="images/dist/vk-icon.svg" width="20" height="12" alt="" /></a>
+					<a href="" target="_blank"><img src="images/dist/inst-icon.svg" width="16" height="16" alt="" /></a>
+					<a href="" target="_blank"><img src="images/dist/tg-icon.svg" width="16" height="16" alt="" /></a>
+				</div>
+			</div>
+			<div class="popup-contacts__wrapper">
+				<div class="title">
+					<span>Контакты</span>
+				</div>
+
+				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
+					<input
+						class="popup__input"
+						type="text"
+						name="fio"
+						placeholder="Представьтесь (ФИО / Компания)"
+						required
+					/>
+					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
+					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
+					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec1'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card1.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Web-дизайн</span>
+
+			<div class="popup__info_desc">
+				<p>1) брифинг с заказчиком (в живую и удаленно);</p>
+				<br />
+				<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
+				<p>3) отрисовка иконок;</p>
+				<br />
+				<p>4) редизайн сайтов;</p>
+				<p>5) адаптивный дизайн;</p>
+				<p>6) mobile first;</p>
+				<br />
+				<p>7) создание:</p>
+				<p>а) дизайн-концепций;</p>
+				<p>б) gif-анимаций;</p>
+				<p>в) баннеров;</p>
+				<p>г) логотипов/эмблем.</p>
+				<br />
+				<p>9) разработка презентаций проектов;</p>
+				<p>10) передача макета на верстку;</p>
+				<p>11) оформление UI-KIT.</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec2'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card2.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">UX/UI-дизайн</span>
+
+			<div class="popup__info_desc">
+				<span class="gradient-text">1) UX-исследование: </span>
+				<p>а) интервью (направленное и неориентированное);</p>
+				<p>б) аудит (дизайна, бизнеса (покупатель, продукт, компания, конкуренты);</p>
+				<p>в) стратегии и идеи;</p>
+				<p>г) аналитика (создание UP, CJM, UJM, EJM, Отчеты (Word, Excel)).</p>
+				<br />
+				<span class="gradient-text">2) UX-проектирование:</span>
+				<p>а) создание ментальных карт (например, сайта);</p>
+				<p>б) скетчинг дизайна сайтов;</p>
+				<p>в) проектирование дизайна сайтов.</p>
+				<br />
+				<span class="gradient-text"> 3) UX-тестирование: </span>
+				<p>а) А/В тестирование;</p>
+				<p>б) Юзабилити-тестирование.</p>
+				<br />
+				<span class="gradient-text">4) UI-визуализация: </span>
+				<p>а) p.s. навыки можно посмотреть в специализации "Web-дизайн".</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec3'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card3.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Прочие специализации</span>
+
+			<div class="popup__info_desc">
+				<span class="gradient-text">1) UI-анимация</span>
+				<p>а) сайты;</p>
+				<p>б) иконки;</p>
+				<p>в) прелоадеры;</p>
+				<p>г) микровзаимодействия.</p>
+				<br />
+				<span class="gradient-text">2) 3D-моделирование:</span>
+				<p>а) Параметрическое;</p>
+				<p>б) Полигональное (Hard Surface).</p>
+				<br />
+				<span class="gradient-text"> 3) Графический-дизайн: </span>
+				<p>а) Инфографика;</p>
+				<p>б) Фирменный стиль и брендинг;</p>
+				<p>в) Рекламная графика.</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'rossbank'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work1.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Россельхозбанк</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и пользователей;
+					</li>
+					<li>проектирование информационных систем;</li>
+					<li>прототипирование с разным уровнем детализации;</li>
+					<li>анимирование интерфейса;</li>
+					<li>тестирование на пользовательской аудитории прототипа решения;</li>
+					<li>защита решений на всех этапах проектирования;</li>
+					<li>
+						сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами маркетинга,
+						аналитики, разработки);
+					</li>
+					<li>участие в создании общего UI-Kit;</li>
+					<li>инициирование переработки сценариев интерфейсов;</li>
+					<li>разработка концепций и интерфейсных решений;</li>
+					<li>помощь в развитии продуктов;</li>
+					<li>формирование гипотез на основе статистических данных;</li>
+					<li>изучение и анализ комментариев и отзывов пользователей по готовым IT-продуктам.</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал новое мобильное приложения для Бизнеса (Юр. лиц);</li>
+					<li>провел помощь в редизайне сайта;</li>
+					<li>сформировал дизайн систему.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'papajohns'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work2.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Папа Джонс</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и пользователей;
+					</li>
+					<li>проектирование информационных систем;</li>
+					<li>прототипирование с разным уровнем детализации;</li>
+					<li>анимирование интерфейса;</li>
+					<li>тестирование на пользовательской аудитории прототипа решения;</li>
+					<li>участие в коллаборациях с компанией (Activision, Universal и др.);</li>
+					<li>
+						сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами маркетинга,
+						аналитики, разработки);
+					</li>
+					<li>участие в создании общего UI-Kit;</li>
+					<li>инициирование переработки сценариев интерфейсов;</li>
+					<li>разработка концепций и интерфейсных решений;</li>
+					<li>помощь в развитии продуктов;</li>
+					<li>формирование гипотез на основе статистических данных;</li>
+					<li>изучение и анализ комментариев и отзывов пользователей по готовым IT-продуктам.</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал новое мобильное приложения с нуля (500 тыс. пользователей в месяц);</li>
+					<li>провел редизайн сайта (десктоп и адаптив, 1 млн пользователей в месяц);</li>
+					<li>создал с нуля дизайн CRM-системы компании;</li>
+					<li>сформировал дизайн систему для всех инструментов компании.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'psih'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work3.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Psih</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						Ведение проекта, ответственность за разработку (подбор команды и точное соблюдение сроков
+						исполнения);
+					</li>
+					<li>Брифинг;</li>
+					<li>
+						Ux-исследование:<br />
+						а) дизайна, бизнеса (покупатель, продукт, компания, конкуренты);<br />
+						б) стратегии и идеи;
+					</li>
+					<li>
+						Ux-проектирование:<br />
+						а) создание ментальных карт (например, сайта);<br />
+						б) скетчинг дизайна сайтов;<br />
+						в) проектирование дизайна сайтов.
+					</li>
+					<li>
+						Визуализация макетов:<br />
+						а) сайта;<br />
+						б) адаптива;<br />
+						в) планшета.
+					</li>
+					<li>
+						Анимация:<br />
+						а) интро;<br />
+						б) bg-сайта;<br />
+						в) микровзаимодействий.
+					</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал сайт, адаптив и планшетную версии;</li>
+					<li>оформил визуальный стиль компании;</li>
+					<li>выделил магазин среди конкурентов;</li>
+					<li>повысил конверсию проекта.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'animedia'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work4.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Animedia.TV</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>Брифинг;</li>
+					<li>
+						Ux-исследование:<br />
+						а) дизайна, бизнеса (покупатель, продукт, компания, конкуренты);<br />
+						б) стратегии и идеи;
+					</li>
+					<li>
+						Ux-проектирование:<br />
+						а) создание ментальных карт (например, сайта);<br />
+						в) проектирование дизайна сайтов.
+					</li>
+					<li>
+						Визуализация макетов:<br />
+						а) сайта;<br />
+						б) адаптива;<br />
+						в) планшета.
+					</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал сайт, адаптив и планшетную версии;</li>
+					<li>оформил визуальный стиль компании;</li>
+					<li>выделил магазин среди конкурентов;</li>
+					<li>повысил конверсию проекта.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<div class="footer__banner">
+				<div class="footer__banner_inner">
+					<div class="footer__banner_info">
+						<span class="footer__banner_info--title">Future Is Near</span>
+						<hr>
+						<p class="footer__banner_info--slogan">
+							Главный слоган моей деятельности! Если вы настроены на реализацию
+							Вашего проекта на мировом уроне, то Вам явно нужно идти ко мне. 
+							Так, чего же вы ещё ждёте?)
+						</p>
+					</div>
+
+					<div class="footer__banner_button">
+						<button type="button" class="button-default button-default--white" @click="openPopup('contacts')">Нанять меня</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer__body">
+				<div class="footer__privacy">
+					<span>
+						© Copyright «Daniil Begma» 2022
+					</span>
+					<a href="">Политика конфиденциальности</a>
+				</div>
+
+				<a href="" class="footer__logo">
+					<svg width="190" height="20" viewBox="0 0 190 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M105.596 9.5717C107.459 8.5924 108.391 7.11817 108.391 5.14902C108.409 4.5307 108.302 3.91528 108.077 3.34053C107.852 2.76578 107.514 2.24384 107.084 1.80674C105.933 0.63368 104.234 0.0481926 101.987 0.0502986H100.348V3.1367H101.534C102.627 3.1367 103.472 3.36099 104.065 3.80326C104.354 4.01238 104.586 4.29154 104.742 4.61538C104.898 4.93922 104.971 5.29748 104.956 5.65763C104.979 6.05735 104.9 6.45625 104.727 6.8159C104.554 7.17554 104.293 7.48382 103.969 7.71102C103.31 8.1754 102.416 8.40601 101.282 8.40601H100.351V11.3503H102.037C104.712 11.3503 106.048 12.238 106.046 14.0133C106.068 14.4147 105.988 14.815 105.816 15.1765C105.643 15.5379 105.382 15.8487 105.059 16.0794C104.397 16.5532 103.475 16.787 102.289 16.787H100.348V19.8766H102.258C104.467 19.8766 106.22 19.4037 107.518 18.4581C108.817 17.5125 109.467 16.172 109.469 14.4367C109.469 12.0905 108.178 10.4689 105.596 9.5717Z" fill="white"/>
+						<path d="M123.658 0.123047H112.888V3.3674H123.658V0.123047Z" fill="white"/>
+						<path d="M122.308 8.27051H116.162V11.537H122.308V8.27051Z" fill="white"/>
+						<path d="M123.721 16.6704H112.808V19.9148H123.721V16.6704Z" fill="white"/>
+						<path d="M142.003 8.27979H137.397V11.5241H142.003V8.27979Z" fill="white"/>
+						<path d="M142.003 15.6372C140.705 16.4532 139.203 16.8701 137.677 16.8376C135.708 16.8376 134.112 16.1921 132.888 14.9011C131.665 13.6101 131.052 11.9674 131.05 9.97296C131.015 8.18163 131.669 6.44716 132.873 5.1396C133.437 4.49641 134.131 3.98433 134.906 3.63818C135.682 3.29203 136.523 3.11994 137.37 3.1336C138.39 3.10771 139.407 3.28035 140.364 3.64221C140.941 3.88772 141.491 4.19593 142.003 4.5615V0.805375C141.898 0.761148 141.792 0.716923 141.693 0.679014C140.349 0.215861 138.935 -0.00334853 137.516 0.0314014C134.617 0.0314014 132.218 1.00229 130.317 2.94405C129.396 3.8562 128.668 4.95023 128.178 6.15895C127.688 7.36767 127.445 8.66557 127.466 9.97296C127.466 12.8477 128.398 15.2223 130.261 17.0966C132.124 18.971 134.56 19.9093 137.569 19.9114C139.082 19.9205 140.586 19.653 142.006 19.1216L142.003 15.6372Z" fill="white"/>
+						<path d="M165.525 16.6421H162.338V19.8864H165.525V16.6421Z" fill="white"/>
+						<path d="M149.978 16.6421H146.786V19.8864H149.978V16.6421Z" fill="white"/>
+						<path d="M162.345 13.4006H165.531V0.0693359H162.124L156.193 9.44542L150.264 0.0693359H146.792V13.4006H149.985V5.73353L156.081 15.0243H156.193L162.345 5.67983V13.4006Z" fill="white"/>
+						<path d="M177.817 8.27981L179.783 4.11933L181.767 8.27981H185.034L181.426 0.034668H178.252L174.646 8.27981H177.817Z" fill="white"/>
+						<path d="M186.305 11.54H183.152H176.441H173.373L169.677 20H173.183L175.314 14.5727H184.249L186.382 20H190L186.305 11.54Z" fill="white"/>
+						<path d="M26.9035 8.46312L28.86 4.19523L30.8321 8.46312H34.0836L30.4936 0H27.3352L23.7451 8.46312H26.9035Z" fill="white"/>
+						<path d="M35.3511 11.7832H32.2145H25.5344H22.4785L18.7983 19.8451H22.2921L24.4132 14.8822H33.3014L35.4288 19.8451H39.0313L35.3511 11.7832Z" fill="white"/>
+						<path d="M82.8013 19.8674V0.120117H86.0311V16.8126H89.3541V19.8674H82.8013Z" fill="white"/>
+						<path d="M50.1118 4.98168L46.4131 0.123047H43.3013V19.9051H46.6025V5.87253L50.1118 10.4721V4.98168Z" fill="white"/>
+						<path d="M56.649 0.123047V13.7038L53.2856 9.24009V14.6516L57.1397 19.7629H59.9533V0.123047H56.649Z" fill="white"/>
+						<path d="M68.2113 6.64014H65.0591V19.7723H68.2113V6.64014Z" fill="white"/>
+						<path d="M68.2113 0.110352H65.0591V3.37682H68.2113V0.110352Z" fill="white"/>
+						<path d="M77.5001 0.0664062H74.3262V6.26132H77.5001V0.0664062Z" fill="white"/>
+						<path d="M77.5001 11.5557H74.3262V19.8419H77.5001V11.5557Z" fill="white"/>
+						<path d="M75.8663 10.5764C76.7427 10.5764 77.4532 9.83953 77.4532 8.93054C77.4532 8.02155 76.7427 7.28467 75.8663 7.28467C74.9898 7.28467 74.2793 8.02155 74.2793 8.93054C74.2793 9.83953 74.9898 10.5764 75.8663 10.5764Z" fill="white"/>
+						<path d="M13.913 2.88733C12.0331 1.02559 9.60973 0.0947266 6.64286 0.0947266H0V5.34508H3.17391V3.25378H6.64286C8.61594 3.25378 10.2081 3.8856 11.4193 5.14922C12.6304 6.41284 13.236 8.01554 13.236 9.95731C13.236 11.9265 12.6304 13.5334 11.4193 14.778C10.2081 16.0227 8.61594 16.6461 6.64286 16.6482H3.17391V15.0687H0V19.8072H6.64286C9.5911 19.8072 12.0103 18.8701 13.9006 16.9957C15.7909 15.1213 16.736 12.7783 16.736 9.96678C16.736 7.1131 15.795 4.75328 13.913 2.88733Z" fill="white"/>
+						<path d="M3.18012 8.44727H0V11.7453H3.18012V8.44727Z" fill="white"/>
+						
+						<defs>
+							<linearGradient id="logo-gradient-footer" gradientUnits="userSpaceOnUse">
+								<stop offset="0%" stop-color="#ffffff" />
+								<stop offset="100%" stop-color="#ffffff" />
+							</linearGradient>
+						</defs>
+					</svg>						
+				</a>
+
+				<div class="footer__socials">
+					<a href="" target="_blank">Вконтакте</a>
+					<a href="" target="_blank">Инстраграм</a>
+					<a href="" target="_blank">Телеграм</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
