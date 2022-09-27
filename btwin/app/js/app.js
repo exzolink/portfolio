@@ -178,7 +178,7 @@ const initMap = () => {
 
         myMap.behaviors.disable("scrollZoom");
       });
-    }, 200);
+    }, 1000);
   });
 };
 
