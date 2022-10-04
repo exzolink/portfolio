@@ -1,8 +1,8 @@
 .media {
-  margin-top: 230px;
+  margin-top: 130px;
 
   &__wrapper {
-    margin-top: 115px;
+    margin-top: 70px;
   }
 
   & .swiper-container {
@@ -10,14 +10,15 @@
   }
 
   & .swiper-wrapper {
-    padding-bottom: 120px;
+    padding-bottom: 110px;
   }
 
   &__item {
     &_publish {
-      padding: 55px;
+      padding: 32px;
       box-shadow: $shadow;
       border-radius: 25px;
+      display: block;
 
       & img {
         height: 515px;
@@ -25,12 +26,12 @@
         object-fit: cover;
       }
 
-      margin-bottom: 165px;
+      margin-bottom: 45px;
     }
 
     &_partner {
       height: auto;
-      padding: 20px 50px;
+      padding: 20px 32px;
       box-shadow: $shadow;
       border-radius: 25px;
       display: flex;

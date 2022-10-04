@@ -1,8 +1,8 @@
 .video {
-  margin-top: 230px;
+  margin-top: 130px;
 
   &__wrapper {
-    margin-top: 85px;
+    margin-top: 70px;
   }
 
   & .swiper-container {
@@ -10,7 +10,6 @@
   }
 
   & .swiper-wrapper {
-    padding-top: 30px;
     padding-bottom: 100px;
   }
 
@@ -32,35 +31,69 @@
       width: 100%;
       margin-bottom: auto;
     }
+
+    &_img {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../images/dist/yt-play.svg");
+        background-repeat: no-repeat;
+        width: 160px;
+        height: 110px;
+        background-size: contain;
+        transform: scale(0);
+        transition: transform 0.3s ease;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 1200px) {
-    .video {
-        margin-top: 80px;
-        
-        &__wrapper {
-            margin-top: 20px;
-        }
+  .video {
+    margin-top: 80px;
 
-        &__item {
-            &_desc {
-                font-size: 20px;
-            }
-        }
+    &__wrapper {
+      margin-top: 20px;
     }
+
+    &__item {
+      &_desc {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .video {
-        &__wrapper {
-            margin-top: 0;
-        }
-
-        &__item {
-            &_desc {
-                font-size: 18px;
-            }
-        }
+  .video {
+    &__wrapper {
+      margin-top: 0;
     }
+
+    &__item {
+      &_desc {
+        font-size: 18px;
+      }
+
+      &_img {
+        &::before {
+          width: 100px;
+          height: 70px;
+        }
+      }
+    }
+  }
 }

@@ -1,12 +1,12 @@
 .feedback {
-  margin-top: 230px;
+  margin-top: 130px;
 
   &__container {
     overflow: unset !important;
   }
 
   &__wrapper {
-    margin-top: 110px;
+    margin-top: 120px;
     position: relative;
 
     &::before {
@@ -23,7 +23,6 @@
   }
 
   & .swiper-wrapper {
-    padding-top: 60px;
     padding-bottom: 110px;
   }
 

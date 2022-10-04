@@ -1,8 +1,8 @@
 .study {
-  margin-top: 230px;
+  margin-top: 130px;
 
   &__wrapper {
-    margin-top: 115px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
   }
@@ -23,7 +23,7 @@
         }
 
         &:not(:last-child) {
-          margin-bottom: 30px;
+          margin-bottom: 15px;
         }
 
         &.select {
@@ -183,7 +183,7 @@
       &_column {
         & .hero-form__label {
           &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
           }
         }
       }

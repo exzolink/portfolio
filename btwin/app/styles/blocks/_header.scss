@@ -1,7 +1,19 @@
 .header {
   background-color: $black;
-  padding: 25px 0;
+  padding: 15px 0;
   box-shadow: $shadow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  transition: transform .2s ease, z-index .2s ease, visibility .2s ease;
+
+  &--active { 
+    z-index: -1;
+    visibility: collapse;
+    transform: translateY(-100%);
+  }
 
   &__logo {
     display: flex;
@@ -35,6 +47,16 @@
 .header__menu {
   &_button {
     display: flex;
+  }
+}
+
+main {
+  padding-top: 124px;
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    padding-top: 90px;
   }
 }
 

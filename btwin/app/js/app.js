@@ -86,7 +86,7 @@ const initSocialsSlider = () => {
       1200: {
         slidesPerView: 2,
         slidesPerSlide: 2,
-        spaceBetween: 60,
+        spaceBetween: 80,
       },
     },
   });
@@ -200,12 +200,69 @@ const initMenu = () => {
   });
 };
 
+const initTogglePanel = () => {
+  const header = document.querySelector(".header");
+  const headerMenu = document.querySelector(".header__menu");
+  let scrollPrev = 0;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 115 && scrolled > scrollPrev) {
+        header.classList.add("header--active");
+
+        if (headerMenu.classList.contains("header__menu--active")) {
+          headerMenu.classList.remove("header__menu--active");
+        }
+      } else {
+        header.classList.remove("header--active");
+      }
+
+      scrollPrev = scrolled;
+    },
+    { passive: true }
+  );
+};
+
+const initVideoListener = () => {
+  const videoPopup = document.querySelector(".video-popup");
+  const videoItems = document.querySelectorAll(".video__item_img");
+
+  videoItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const link = item.getAttribute("href");
+
+      if (link) {
+        const videoPopupContent = videoPopup.querySelector(
+          ".video-popup__inner"
+        );
+        videoPopupContent.innerHTML = `<iframe src="${link}" frameborder="0" loading="lazy" allow="autoplay" allowfullscreen=""></iframe>`;
+        videoPopup.classList.add("video-popup--active");
+      }
+    });
+  });
+
+  videoPopup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("video-popup")) {
+      videoPopup.classList.remove("video-popup--active");
+    }
+  });
+};
+
+AOS.init({
+  disable: "phone",
+  offset: "-30",
+});
 initFeedbackSlider();
 initResultsSlider();
 initTabToggler();
 initVideoSlider();
 initMediaSlider();
 initSocialsSlider();
-initMap();
 initMenu();
-AOS.init();
+initMap();
+initTogglePanel();
+initVideoListener();

@@ -1,8 +1,8 @@
 .socials {
-  margin-top: 230px;
+  margin-top: 130px;
 
   &__wrapper {
-    margin-top: 115px;
+    margin-top: 70px;
   }
 
   & .swiper-container {
@@ -10,8 +10,7 @@
   }
 
   & .swiper-wrapper {
-    padding-top: 30px;
-    padding-bottom: 120px;
+    padding-bottom: 110px;
   }
 
   &__item {
@@ -20,7 +19,7 @@
     padding: 32px;
 
     & img {
-      height: 730px;
+      height: 650px;
       width: 100%;
       object-fit: cover;
     }
