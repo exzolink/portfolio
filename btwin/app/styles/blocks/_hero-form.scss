@@ -7,7 +7,7 @@
   }
 
   &__title {
-    font-size: 48px;
+    font-size: $font-header;
     letter-spacing: -0.02em;
     margin-bottom: 15px;
   }
@@ -25,7 +25,7 @@
     flex-direction: column;
 
     & span {
-      font-size: 24px;
+      font-size: $font-main;
       margin-bottom: 10px;
       margin-left: 15px;
     }
@@ -34,10 +34,10 @@
   &__input {
     border: 3px solid $black;
     border-radius: 15px;
-    padding: 6px 11px;
+    padding: 7px 12px;
     outline: none;
     width: 100%;
-    font-size: 24px;
+    font-size: 1.2rem;
     transition: border-color 0.2s ease;
 
     &:focus {
@@ -52,7 +52,7 @@
     border-radius: 15px;
     text-align: center;
     padding: 9px;
-    font-size: 24px;
+    font-size: $font-main;
     font-family: inherit;
     transition: background-color 0.2s ease, color 0.2s ease;
 
@@ -64,7 +64,7 @@
   }
 
   &__text {
-    font-size: 24px;
+    font-size: $font-main;
 
     & a {
       color: $blue;
@@ -127,7 +127,7 @@
     }
 
     &__input {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
@@ -135,7 +135,7 @@
 @media screen and (max-width: 550px) {
   .hero-form {
     &__title {
-      font-size: 32px;
+      font-size: $font-additional;
     }
 
     &__form {

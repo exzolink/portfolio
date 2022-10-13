@@ -3,10 +3,13 @@
 
   &__wrapper {
     margin-top: 70px;
+    position: relative;
   }
 
   & .swiper-container {
-    overflow: initial;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
   }
 
   & .swiper-wrapper {
@@ -16,7 +19,7 @@
   &__item {
     &_publish {
       padding: 32px;
-      box-shadow: $shadow;
+      box-shadow: 0 0.1250rem 0.3125rem rgba(0,0,0,.2);
       border-radius: 25px;
       display: block;
 
@@ -32,7 +35,7 @@
     &_partner {
       height: auto;
       padding: 20px 32px;
-      box-shadow: $shadow;
+      box-shadow: 0 0.1250rem 0.3125rem rgba(0,0,0,.2);
       border-radius: 25px;
       display: flex;
       justify-content: center;
@@ -133,7 +136,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 650px) {
   .media {

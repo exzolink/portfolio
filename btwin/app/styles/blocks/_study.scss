@@ -61,7 +61,7 @@
   &__title {
     margin-bottom: 40px;
     font-weight: 700;
-    font-size: 32px;
+    font-size: $font-additional;
     letter-spacing: -0.07em;
     display: block;
   }
@@ -95,7 +95,7 @@
 
       &--meta {
         font-weight: 700;
-        font-size: 23px;
+        font-size: $font-main-alt;
         letter-spacing: -0.07em;
         margin-bottom: 5px;
       }
@@ -107,7 +107,7 @@
       }
 
       &--desc {
-        font-size: 24px;
+        font-size: $font-main;
         line-height: 1.25;
       }
     }
@@ -194,7 +194,7 @@
 @media screen and (max-width: 550px) {
   .study {
     &__title {
-      font-size: 24px;
+      font-size: $font-main;
       margin-bottom: 15px;
     }
 

@@ -9,6 +9,11 @@ $shadow: 0px 100px 80px rgba(0, 0, 0, 0.012),
   0px 12.5px 10px rgba(0, 0, 0, 0.06), 0px 6.7px 5.3px rgba(0, 0, 0, 0.048),
   0px 2.8px 2.2px rgba(0, 0, 0, 0.034);
 
+$font-header: 44px;
+$font-additional: 30px;
+$font-main: 22px;
+$font-main-alt: 21px;
+
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
@@ -19,8 +24,8 @@ $shadow: 0px 100px 80px rgba(0, 0, 0, 0.012),
   }
 }
 
-@include font("Candara", normal, 400, "../fonts/Candara-Regular.woff2");
-@include font("Candara", normal, 700, "../fonts/Candara-Bold.woff2");
+@include font("Nunito", normal, 400, "../fonts/Nunito-Regular.woff2");
+@include font("Nunito", normal, 700, "../fonts/Nunito-Bold.woff2");
 
 [x-cloak] {
   display: none !important;
@@ -62,7 +67,7 @@ html {
 }
 
 body {
-  font-family: "Candara", sans-serif;
+  font-family: "Nunito", sans-serif;
   overflow-x: hidden;
 }
 
@@ -151,7 +156,7 @@ input[type="checkbox"] {
 }
 
 .title {
-  font-size: 48px;
+  font-size: $font-header;
   font-weight: 700;
   letter-spacing: -0.02em;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
@@ -179,7 +184,7 @@ input[type="checkbox"] {
   max-width: 265px;
   margin: 0 auto;
   display: block;
-  font-size: 24px;
+  font-size: $font-main;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -202,7 +207,7 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 550px) {
   .title {
-    font-size: 32px;
+    font-size: $font-additional;
     margin-bottom: 20px;
   }
   .subtitle {
@@ -214,6 +219,105 @@ input[type="checkbox"] {
 
     &:not(:last-child) {
       margin-right: 20px !important;
+    }
+  }
+}
+
+#up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: $orange;
+  border-radius: 100%;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.up-button {
+  &--hidden {
+    opacity: 0;
+    visibility: collapse;
+  }
+}
+
+.slider {
+  &-button {
+    &-prev, &-next {
+      top: 45%;
+      position: absolute;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-image: url("../images/dist/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 34px 17px;
+      background-position: center;
+      cursor: pointer;
+      opacity: .7;
+      transition: opacity .2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-prev {
+      left: -50px;
+    }
+
+    &-next {
+      right: -50px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .slider {
+    &-button {
+      &-prev, &-next {
+        background-color: rgba(50, 50, 50, .2);
+        border-radius: 8px;
+        z-index: 2;
+        width: 34px;
+        height: 34px;
+        background-size: 25px 13px;
+      }
+
+      &-prev {
+        left: 5px;
+      }
+
+      &-next {
+        right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    &-button {
+      &-prev, &-next {
+        top: 40%;
+        border-radius: 0;
+      }
+
+      &-prev {
+        left: -15px;
+      }
+
+      &-next {
+        right: -15px;
+      }
     }
   }
 }

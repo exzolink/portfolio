@@ -4,7 +4,9 @@
 	"description": "Grizzly",
 	"main": "index.js",
 	"type": "module",
-	"browserslist": [ "last 1 version" ],
+	"browserslist": [
+		"last 1 version"
+	],
 	"scripts": {
 		"start": "gulp",
 		"build": "gulp build"
@@ -29,6 +31,7 @@
 		"gulp-less-glob": "^1.0.0",
 		"gulp-noop": "^1.0.1",
 		"gulp-postcss": "^9.0.1",
+		"gulp-px-to-rem": "^1.0.4",
 		"gulp-rsync": "0.0.9",
 		"gulp-sass": "^5.1.0",
 		"gulp-sass-glob": "^1.1.0",

@@ -23,7 +23,7 @@
   }
 
   &__tip {
-    font-size: 24px;
+    font-size: $font-main;
   }
 
   &__header {
@@ -46,7 +46,7 @@
       width: 100%;
       padding-bottom: 20px;
       border-bottom: 2px solid $orange;
-      font-size: 23px;
+      font-size: $font-main-alt;
       font-weight: 700;
       cursor: pointer;
       outline: none;
@@ -62,7 +62,7 @@
 
     &--active {
       display: flex;
-      animation: mapAnim .8s forwards;
+      animation: mapAnim 0.8s forwards;
     }
   }
 
@@ -80,16 +80,24 @@
     flex-direction: column;
 
     &_title {
-      font-size: 24px;
+      font-size: $font-main;
       display: block;
       margin-top: 15px;
       margin-bottom: 15px;
       font-weight: 700;
       color: $black;
-      transition: color .2s ease;
+      transition: color 0.2s ease;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $orange;
+      }
+    }
+
+    &_logo {
+      & img {
+        max-width: 130px;
+        width: 100%;
       }
     }
 
@@ -162,11 +170,14 @@
     }
 
     &__body {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
       overflow: auto;
       max-height: none;
+
+      &--active {
+        display: grid;
+      }
     }
 
     &__item {
@@ -176,7 +187,7 @@
     }
 
     &__tip {
-      font-size: 24px;
+      font-size: $font-main;
     }
   }
 }

@@ -26,6 +26,7 @@ import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import del           from 'del'
+import px2rem        from 'gulp-px-to-rem'
 
 function browsersync() {
 	browserSync.init({
@@ -48,6 +49,7 @@ function styles() {
 			autoprefixer({ grid: 'autoplace' }),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
 		]))
+		.pipe(px2rem({accuracy: 4, rootPX: 16}))
 		.pipe(concat('app.min.css'))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())

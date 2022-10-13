@@ -22,7 +22,7 @@
   }
 
   &__slogan {
-    font-size: 23px;
+    font-size: $font-main-alt;
     font-weight: 700;
     letter-spacing: -0.07em;
     display: block;
@@ -80,7 +80,7 @@
 @media screen and (max-width: 1400px) {
   .hero {
     &__title {
-      font-size: 48px;
+      font-size: $font-header;
     }
 
     &__circles {
@@ -135,7 +135,7 @@
 @media screen and (max-width: 550px) {
   .hero {
     &__title {
-      font-size: 32px;
+      font-size: $font-additional;
     }
   }
 }

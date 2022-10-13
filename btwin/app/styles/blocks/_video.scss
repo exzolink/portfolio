@@ -3,25 +3,28 @@
 
   &__wrapper {
     margin-top: 70px;
-  }
-
-  & .swiper-container {
-    overflow: initial;
+    position: relative;
   }
 
   & .swiper-wrapper {
     padding-bottom: 100px;
   }
 
+  & .swiper-container {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   &__item {
-    box-shadow: $shadow;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     padding: 32px;
     height: auto;
 
     &_desc {
       line-height: 1.25;
-      font-size: 24px;
+      font-size: $font-main;
       margin-top: 25px;
     }
 

@@ -45,12 +45,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .video-popup {
-        &__inner {
-            & iframe {
-              width: 100%;
-              height: 30vh;
-            }
-          }
+  .video-popup {
+    &__inner {
+      & iframe {
+        width: 100%;
+        height: 30vh;
+      }
     }
+  }
 }

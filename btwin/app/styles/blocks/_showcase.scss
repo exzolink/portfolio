@@ -14,7 +14,7 @@
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 45px;
-    font-size: 48px;
+    font-size: $font-header;
   }
 
   &__info {
@@ -24,6 +24,8 @@
 
   &__img {
     flex-basis: 50%;
+    display: flex;
+    align-items: flex-start;
 
     & img {
       max-width: 100%;
@@ -58,13 +60,13 @@
     }
 
     &_title {
-      font-size: 32px;
+      font-size: $font-additional;
       font-weight: 700;
       margin-bottom: 24px;
     }
 
     &_desc {
-      font-size: 24px;
+      font-size: $font-main;
       line-height: 1.2;
     }
   }
@@ -82,7 +84,7 @@
       }
 
       &_title {
-        font-size: 24px;
+        font-size: $font-main;
         margin-bottom: 12px;
       }
 
@@ -135,7 +137,7 @@
 @media screen and (max-width: 550px) {
   .showcase {
     &__title {
-      font-size: 32px;
+      font-size: $font-additional;
     }
 
     &__item {

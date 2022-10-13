@@ -24,7 +24,7 @@
       display: flex;
       border-radius: 25px;
       padding: 32px;
-      max-width: 1070px;
+      max-width: 1050px;
       position: relative;
     }
 
@@ -53,7 +53,7 @@
       height: 65px;
       color: $black;
       border-radius: 100%;
-      font-size: 24px;
+      font-size: $font-main;
       background-color: $orange;
       display: flex;
       justify-content: center;
@@ -67,7 +67,7 @@
       bottom: -5px;
       width: 65px;
       height: 65px;
-      font-size: 24px;
+      font-size: $font-main;
       color: $black;
       border-radius: 100%;
       background-color: $orange;
@@ -81,13 +81,14 @@
       left: 50%;
       position: absolute;
       transform: translateX(-50%);
-      font-size: 24px;
+      font-size: $font-main;
       bottom: 3px;
     }
   }
 
   &__info {
     margin-left: auto;
+    margin-right: auto;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -95,11 +96,11 @@
     &_title {
       margin-bottom: 70px;
       font-weight: 700;
-      font-size: 48px;
+      font-size: $font-header;
     }
 
     &_desc {
-      font-size: 24px;
+      font-size: $font-main;
       line-height: 1.25;
       display: block;
       max-width: 400px;
@@ -244,7 +245,7 @@
       text-align: center;
 
       &_title {
-        font-size: 32px;
+        font-size: $font-additional;
         margin-bottom: 20px;
       }
 

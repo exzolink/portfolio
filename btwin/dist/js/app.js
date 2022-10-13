@@ -10,6 +10,10 @@ const initVideoSlider = () => {
       bullets: true,
       clickable: true,
     },
+    navigation: {
+      nextEl: ".video__wrapper .slider-button-next",
+      prevEl: ".video__wrapper .slider-button-prev",
+    },
     breakpoints: {
       320: {
         slidesPerSlide: 1,
@@ -41,6 +45,10 @@ const initMediaSlider = () => {
       bullets: true,
       clickable: true,
     },
+    navigation: {
+      nextEl: ".media__wrapper .slider-button-next",
+      prevEl: ".media__wrapper .slider-button-prev",
+    },
     breakpoints: {
       320: {
         slidesPerSlide: 1,
@@ -71,6 +79,10 @@ const initSocialsSlider = () => {
       el: ".socials__container .swiper-pagination",
       bullets: true,
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".socials__wrapper .slider-button-next",
+      prevEl: ".socials__wrapper .slider-button-prev",
     },
     breakpoints: {
       320: {
@@ -252,6 +264,30 @@ const initVideoListener = () => {
   });
 };
 
+const initUpButton = () => {
+  const upButton = document.getElementById("up-button");
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 3000) {
+        upButton.classList.remove("up-button--hidden");
+      } else {
+        upButton.classList.add("up-button--hidden");
+      }
+    },
+    { passive: true }
+  );
+
+  upButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+};
+
 AOS.init({
   disable: "phone",
   offset: "-30",
@@ -264,5 +300,6 @@ initMediaSlider();
 initSocialsSlider();
 initMenu();
 initMap();
-initTogglePanel();
+//initTogglePanel();
+initUpButton();
 initVideoListener();
