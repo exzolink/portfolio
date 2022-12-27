@@ -26,6 +26,7 @@
       line-height: 1.25;
       font-size: $font-main;
       margin-top: 25px;
+      text-align: center;
     }
 
     & img,
@@ -95,6 +96,7 @@
         &::before {
           width: 100px;
           height: 70px;
+          transform: scale(1);
         }
       }
     }

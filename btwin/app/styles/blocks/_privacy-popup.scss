@@ -1,0 +1,94 @@
+.privacy-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: rgba(40, 40, 40, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0;
+
+  &__container {
+    max-width: 900px;
+    padding-top: 60px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+
+  &__button {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  &__title {
+    color: $blue;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    & a {
+      color: darken($blue, 10%);
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    display: block;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  &--active {
+    display: flex;
+    animation: privacy-popup 0.4s forwards;
+  }
+}
+
+@keyframes privacy-popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .privacy-popup {
+      &__button {
+        right: 5px;
+      }
+
+      &__content {
+        padding: 15px;
+      }
+
+      &__title {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+    }
+  }
+  

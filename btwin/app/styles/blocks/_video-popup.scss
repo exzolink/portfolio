@@ -15,6 +15,13 @@
     max-width: 900px;
     margin: auto;
     width: 100%;
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
   }
 
   &__inner {
@@ -46,6 +53,10 @@
 
 @media screen and (max-width: 768px) {
   .video-popup {
+    &__button {
+      right: 5px;
+    }
+
     &__inner {
       & iframe {
         width: 100%;

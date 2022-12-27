@@ -51,6 +51,12 @@
       cursor: pointer;
       outline: none;
     }
+
+    &_subtext {
+      margin-top: 10px;
+      font-size: 12px;
+      display: block;
+    }
   }
 
   &__body {
@@ -110,12 +116,47 @@
     &_links {
       display: flex;
       flex-direction: column;
+
+      &.email, &.phones, &.social {
+
+        & .map__item_link::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 4px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &.email .map__item_link {
+        &::before {
+          background-image: url("../images/dist/map-email-icon.svg");
+        }
+      }
+
+      &.phones .map__item_link {
+        &::before {
+          background-image: url("../images/dist/map-phone-icon.svg");
+        }
+      }
+
+      &.social .map__item_link {
+        &::before {
+          background-image: url("../images/dist/map-social-icon.svg");
+        }
+      }
     }
 
     &_link {
       font-size: 18px;
       color: $blue;
       transition: color 0.2s ease;
+      position: relative;
+      padding-left: 28px;
 
       &:hover,
       &:focus {

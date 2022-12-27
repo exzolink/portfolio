@@ -239,6 +239,7 @@ const initTogglePanel = () => {
 
 const initVideoListener = () => {
   const videoPopup = document.querySelector(".video-popup");
+  const videoCloseBtn = document.querySelector(".video-popup__button");
   const videoItems = document.querySelectorAll(".video__item_img");
 
   videoItems.forEach((item) => {
@@ -261,6 +262,33 @@ const initVideoListener = () => {
     if (e.target.classList.contains("video-popup")) {
       videoPopup.classList.remove("video-popup--active");
     }
+  });
+
+  videoCloseBtn.addEventListener("click", (e) => {
+      videoPopup.classList.remove("video-popup--active");
+  });
+};
+
+const initPrivacyPopup = () => {
+  const privacyPopup = document.querySelector(".privacy-popup");
+  const privacyCloseBtn = document.querySelector(".privacy-popup__button");
+  const links = document.querySelectorAll(".hero-form__text a");
+
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      privacyPopup.classList.add("privacy-popup--active");
+    });
+  });
+
+  privacyPopup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("privacy-popup")) {
+      privacyPopup.classList.remove("privacy-popup--active");
+    }
+  });
+
+  privacyCloseBtn.addEventListener("click", (e) => {
+    privacyPopup.classList.remove("privacy-popup--active");
   });
 };
 
@@ -303,3 +331,4 @@ initMap();
 //initTogglePanel();
 initUpButton();
 initVideoListener();
+initPrivacyPopup();

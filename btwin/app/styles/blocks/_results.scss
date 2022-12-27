@@ -40,6 +40,8 @@
     }
 
     &_img {
+      position: relative;
+      z-index: 1;
       &:not(:last-child) {
         margin-right: 30px;
       }
@@ -59,6 +61,7 @@
       justify-content: center;
       align-items: center;
       line-height: 0;
+      z-index: 2;
     }
 
     &_to {
@@ -75,14 +78,19 @@
       justify-content: center;
       line-height: 0;
       align-items: center;
+      z-index: 2;
     }
 
     &_label {
       left: 50%;
       position: absolute;
       transform: translateX(-50%);
-      font-size: $font-main;
-      bottom: 3px;
+      font-size: 16px;
+      bottom: -24px;
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
     }
   }
 
@@ -195,10 +203,6 @@
       margin-top: 20px;
     }
 
-    &__container {
-      overflow: initial !important;
-    }
-
     &__images {
       &_img {
         &:not(:last-child) {
@@ -209,16 +213,25 @@
       &_wrapper {
         max-width: none;
         padding: 20px;
+        box-shadow: 0 .125rem .3125rem rgba(0,0,0,.2);
       }
       &_from,
       &_to {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+      }
+      &_from {
+        left: 0;
+      }
+      &_to {
+        right: 0;
       }
       &_label {
         font-size: 16px;
-        bottom: 3px;
+        bottom: -18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
 
@@ -256,7 +269,8 @@
 
     &__images {
       &_label {
-        font-size: 14px;
+        font-size: 10px;
+        bottom: -15px;
       }
     }
   }

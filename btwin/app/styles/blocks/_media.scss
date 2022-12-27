@@ -16,6 +16,10 @@
     padding-bottom: 110px;
   }
 
+  & .slider-button-next, & .slider-button-prev {
+    top: 30%;
+  }
+
   &__item {
     &_publish {
       padding: 32px;
@@ -48,12 +52,13 @@
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
   .media {
     &__item {
       &_publish {
         & img {
-          height: 400px;
+          object-fit: initial;
+          height: 430px;
         }
       }
     }
@@ -66,6 +71,10 @@
       &_publish {
         margin-bottom: 50px;
         padding: 25px;
+
+        & img {
+          height: 410px;
+        }
       }
 
       &_partner {
@@ -81,6 +90,12 @@
 
     &__wrapper {
       margin-top: 40px;
+    }
+
+    &_publish {
+      & img {
+        height: 360px;
+      }
     }
   }
 }
